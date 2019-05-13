@@ -1,12 +1,8 @@
-const path = require('path')
-
-const config = {
+module.exports = {
   sass: [
     {
       source: './src/styles/index.scss',
-      target: './dist/css/innoq-bootstrap-theme.css'
+      target: './dist/css/uba-bootstrap-theme.css'
     }
   ]
 }
-
-module.exports = config

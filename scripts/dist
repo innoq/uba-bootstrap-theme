@@ -6,7 +6,7 @@ yarn run compile
 
 if [ "$TRAVIS_TAG" != "" ]; then
   mkdir -p dist/css/$TRAVIS_TAG
-  cp dist/css/innoq-bootstrap-theme.css dist/css/$TRAVIS_TAG/innoq-bootstrap-theme.css
+  cp dist/css/uba-bootstrap-theme.css dist/css/$TRAVIS_TAG/uba-bootstrap-theme.css
 
-  zip -r innoq-bootstrap-theme-$TRAVIS_TAG.zip src/ dist/ package.json README.md LICENSE
+  zip -r uba-bootstrap-theme-$TRAVIS_TAG.zip src/ dist/ package.json README.md LICENSE
 fi

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -ex
 
-# TODO: Generate Bootstrap docs and serve locally
 cd bootstrap
+
+echo "" > site/_includes/ads.html
 
 npm install
 
@@ -10,10 +11,10 @@ bundle install
 
 npm run docs-compile
 
-mkdir -p ../documentation
+mkdir -p ../documentation/docs/4.3/dist/css
 
 cp -R _gh_pages/* ../documentation
 
 cd ..
 
-cp dist/css/innoq-bootstrap-theme.css documentation/dist/css/bootstrap.css
+cp dist/css/uba-bootstrap-theme.css documentation/docs/4.3/dist/css/bootstrap.css

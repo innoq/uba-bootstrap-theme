@@ -1,18 +1,4 @@
 //
-// INNOQ Styleguide
-//
-
-@import 'innoq-styleguide/dist/sass/settings/breakpoints';
-@import 'innoq-styleguide/dist/sass/settings/colors';
-@import 'innoq-styleguide/dist/sass/settings/theme-matthew';
-@import 'innoq-styleguide/dist/sass/settings/icons';
-@import 'innoq-styleguide/dist/sass/settings/typography';
-@import 'innoq-styleguide/dist/sass/settings/spacings';
-@import 'innoq-styleguide/dist/sass/tools/fonts';
-@import 'innoq-styleguide/dist/sass/generic/fontfaces';
-
-
-//
 // Custom Bootstrap variables
 //
 
@@ -20,25 +6,14 @@
 
 
 //
-// Bootstrap 4.0
+// Bootstrap 4.3
 //
 
-@import 'bootstrap/scss/bootstrap-reboot';
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap/scss/bootstrap-grid';
+@import '../../bootstrap/scss/bootstrap';
 
 
 //
 // Bootstrap Overrides
 //
 
-@import 'overrides/buttons';
-@import 'overrides/dropdowns';
-@import 'overrides/forms';
-@import 'overrides/list-groups';
-@import 'overrides/modals';
-@import 'overrides/navbar';
-@import 'overrides/popovers';
-@import 'overrides/tables';
-@import 'overrides/type';
-@import 'overrides/various';
+//@import 'overrides/buttons';
