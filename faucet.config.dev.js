@@ -1,11 +1,16 @@
 module.exports = {
   static: [
     {
+      source: './src/fonts',
+      target: './dist/fonts'
+    },
+    // Copy stuff for bootstrap documentation
+    {
       source: './dist/css/uba-bootstrap-theme.css',
       target: './documentation/docs/4.3/dist/css/bootstrap.css'
     },
     {
-      source: './src/fonts',
+      source: './dist/fonts',
       target: './documentation/docs/4.3/dist/fonts'
     },
     {

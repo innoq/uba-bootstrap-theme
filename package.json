@@ -9,7 +9,8 @@
     "compile": "faucet",
     "compile-watch": "yarn run compile --watch --config=faucet.config.dev.js",
     "install-docs": "./scripts/docs",
-    "test": "sass-lint -v -q"
+    "test": "sass-lint -v -q",
+    "prepare": "faucet"
   },
   "repository": {
     "type": "git",
