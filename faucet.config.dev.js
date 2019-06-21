@@ -4,6 +4,10 @@ module.exports = {
       source: './src/fonts',
       target: './dist/fonts'
     },
+    {
+      source: './src/images',
+      target: './dist/images'
+    },
     // Copy stuff for bootstrap documentation
     {
       source: './dist/css/uba-bootstrap-theme.css',
@@ -12,6 +16,10 @@ module.exports = {
     {
       source: './dist/fonts',
       target: './documentation/docs/4.3/dist/fonts'
+    },
+    {
+      source: './dist/images',
+      target: './documentation/docs/4.3/dist/images'
     },
     {
       source: './bootstrap/dist/js',
