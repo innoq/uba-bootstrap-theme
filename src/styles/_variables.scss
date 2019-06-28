@@ -2,3 +2,39 @@
 // See https://getbootstrap.com/docs/4.3/getting-started/theming/
 
 $font-family-sans-serif:            MetaCompPro-Normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+//
+// Buttons
+//
+
+$btn-font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+$btn-font-size: 15px;
+$border-radius: 2px;
+$btn-padding-y: .625rem;
+$btn-padding-x: .625rem;
+$btn-line-height: 1.333333rem;
+
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+
+.btn { padding-bottom: .375rem !important; }
+
+.btn-secondary {
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: $uba-blue !important;
+    border-color: $uba-blue !important;
+  }
+}
+
+//
+// Links
+//
+
+$link-hover-color: $uba-gray;
+$link-hover-decoration: none;
