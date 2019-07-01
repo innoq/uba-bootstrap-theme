@@ -43,23 +43,45 @@ $link-hover-decoration: none;
 // Nav
 //
 
-.nav {
-  background-image: url('../images/bg-header-pattern.png');
-  border-bottom: 10px solid $uba-blue;
-}
+.nav, .navbar { border-bottom: 10px solid $uba-blue; }
+.nav, .bg-primary, .bg-dark { background-image: url('../images/bg-header-pattern.png'); }
+.bg-light { background-image: url('../images/bg-box-pattern.png'); }
+.bd-sidenav { background-image: none; }
 
-.nav-link {
+.navbar-brand { content: url('../images/upb-brand-white.jpg'); }
+
+.nav .nav-link {
   font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 15px;
   color: $uba-white;
-
   &:hover,
   &.hover,
   &:focus,
   &.focus,
   &:active,
   &.active {
-    color: $uba-white;
+    color: $uba-white !important;
+    background-color: $uba-blue;
+  }
+}
+
+.navbar {
+  padding-bottom: 0 !important;
+}
+
+.navbar .nav-link {
+  font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+  color: $uba-white;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-white !important;
     background-color: $uba-blue;
   }
 }
@@ -72,17 +94,24 @@ $nav-tabs-border-color:             transparent;
 $nav-tabs-border-width:             none;
 $nav-tabs-border-radius:            0px;
 $nav-tabs-link-hover-border-color:  transparent;
-$nav-tabs-link-active-color:        $uba-white;
-$nav-tabs-link-active-bg:           $uba-blue;
+$nav-tabs-link-active-color:        $uba-blue;
+$nav-tabs-link-active-bg:           transparent;
 $nav-tabs-link-active-border-color: transparent;
 
 $nav-pills-border-radius: 0px;
+
 // Dropdowns
 //
 // Dropdown menu container and contents.
 
-.dropdown-menu { top: 8px !important; }
-.dropdown-item { font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+.nav {
+  .dropdown-menu { top: 8px !important; }
+  .dropdown-item { font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+}
+
+.navbar {
+  .dropdown-menu { top: 105px !important; }
+}
 
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-y:                0px;
