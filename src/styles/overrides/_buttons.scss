@@ -1,0 +1,17 @@
+//
+// Buttons
+//
+
+.btn { padding-bottom: .375rem; }
+
+.btn-secondary {
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: $uba-blue;
+    border-color: $uba-blue;
+  }
+}

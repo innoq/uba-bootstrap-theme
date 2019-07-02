@@ -1,15 +1,22 @@
 // Variables
 // See https://getbootstrap.com/docs/4.3/getting-started/theming/
 
-$font-family-sans-serif:            MetaCompPro-Normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: MetaCompPro-Normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+//
+// General styles
+//
+
+$border-radius: 2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
 
 //
 // Buttons
 //
 
-$btn-font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$btn-font-weight: 700;
 $btn-font-size: 15px;
-$border-radius: 2px;
 $btn-padding-y: .625rem;
 $btn-padding-x: .625rem;
 $btn-line-height: 1.333333rem;
@@ -17,20 +24,6 @@ $btn-line-height: 1.333333rem;
 $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-active-box-shadow: none;
-
-.btn { padding-bottom: .375rem !important; }
-
-.btn-secondary {
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    background-color: $uba-blue !important;
-    border-color: $uba-blue !important;
-  }
-}
 
 //
 // Links
@@ -42,49 +35,6 @@ $link-hover-decoration: none;
 //
 // Nav
 //
-
-.nav, .navbar { border-bottom: 10px solid $uba-blue; }
-.nav, .bg-primary, .bg-dark { background-image: url('../images/bg-header-pattern.png'); }
-.bg-light { background-image: url('../images/bg-box-pattern.png'); }
-.bd-sidenav { background-image: none; }
-
-.navbar-brand { content: url('../images/upb-brand-white.jpg'); }
-
-.nav .nav-link {
-  font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 15px;
-  color: $uba-white;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    color: $uba-white !important;
-    background-color: $uba-blue;
-  }
-}
-
-.navbar {
-  padding-bottom: 0 !important;
-}
-
-.navbar .nav-link {
-  font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 15px;
-  color: $uba-white;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    color: $uba-white !important;
-    background-color: $uba-blue;
-  }
-}
 
 $nav-link-disabled-color: $uba-gray;
 $nav-link-padding-y: .725rem;
@@ -103,19 +53,11 @@ $nav-pills-border-radius: 0px;
 // Dropdowns
 //
 // Dropdown menu container and contents.
+//
 
-.nav {
-  .dropdown-menu { top: 8px !important; }
-  .dropdown-item { font-family: MetaCompPro-Bold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-}
-
-.navbar {
-  .dropdown-menu { top: 105px !important; }
-}
-
-$dropdown-min-width:                10rem !default;
+$dropdown-min-width:                10rem;
 $dropdown-padding-y:                0px;
-$dropdown-spacer:                   .125rem !default;
+$dropdown-spacer:                   .125rem;
 $dropdown-color:                    $uba-white;
 $dropdown-bg:                       $uba-blue;
 $dropdown-border-color:             transparent;

@@ -1,0 +1,42 @@
+//
+// Nav
+//
+
+.nav, .navbar { border-bottom: 10px solid $uba-blue; }
+.nav, .bg-primary, .bg-dark { background-image: url('../images/bg-header-pattern.png'); }
+.bg-light { background-image: url('../images/bg-box-pattern.png'); }
+.bd-sidenav { background-image: none; }
+
+.nav .nav-link {
+  font-weight: $font-weight-bold;
+  font-size: 15px;
+  color: $uba-white;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-white;
+    background-color: $uba-blue;
+  }
+}
+
+.navbar { padding-bottom: 0; }
+
+.navbar .nav-link {
+  font-weight: $font-weight-bold;
+  font-size: 15px;
+  color: $uba-white;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-white;
+    background-color: $uba-blue;
+  }
+}
