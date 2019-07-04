@@ -16,10 +16,10 @@
   }
 }
 
-.navbar .btn-outline-success {
+.navbar .form-inline .btn {
   color: $uba-white;
   background-color: $uba-blue;
-  border: none;
+  border-color: $uba-blue;
   &:hover,
   &.hover,
   &:focus,

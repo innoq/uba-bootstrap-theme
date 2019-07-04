@@ -10,7 +10,6 @@
 .nav .nav-link {
   font-weight: $font-weight-bold;
   font-size: 15px;
-  color: $uba-white;
   &:hover,
   &.hover,
   &:focus,
@@ -41,21 +40,11 @@
   }
 }
 
-.navbar-collapse .navbar-nav .nav-link {
-  margin-bottom: .5rem;
-  padding: .5rem;
-}
-
-.navbar-collapse .form-inline .btn {
-  color: $uba-white;
-  background-color: $uba-blue;
-  border-color: $uba-blue;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &.active,
-  &.active {
-    background-color: $uba-blue-dark;
+.navbar-collapse {
+  &.show {
+    .navbar-nav .nav-link {
+      margin-bottom: .5rem;
+      padding: .5rem;
+    }
   }
 }
