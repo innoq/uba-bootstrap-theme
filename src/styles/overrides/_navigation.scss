@@ -28,8 +28,8 @@
 .navbar .nav-link {
   font-weight: $font-weight-bold;
   font-size: 15px;
-  padding-bottom: 1rem;
-  margin-bottom: -1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: -1.5rem;
   &:hover,
   &.hover,
   &:focus,
@@ -38,5 +38,24 @@
   &.active {
     color: $uba-white !important;
     background-color: $uba-blue;
+  }
+}
+
+.navbar-collapse .navbar-nav .nav-link {
+  margin-bottom: .5rem;
+  padding: .5rem;
+}
+
+.navbar-collapse .form-inline .btn {
+  color: $uba-white;
+  background-color: $uba-blue;
+  border-color: $uba-blue;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &.active,
+  &.active {
+    background-color: $uba-blue-dark;
   }
 }
