@@ -3,22 +3,8 @@
 // Dropdown menu container and contents.
 //
 .nav {
-  .dropdown-menu { top: 8px; }
+  .dropdown-menu { margin-top: 10px; }
   .dropdown-item { font-weight: $font-weight-bold; }
 }
 
-.navbar {
-  .dropdown-menu { top: 105px; }
-}
-
-.nav-link.dropdown-toggle {
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    color: $uba-white !important;
-    background-color: $uba-blue !important;
-  }
-}
+.navbar { .dropdown-menu { margin-top: 24px; } }

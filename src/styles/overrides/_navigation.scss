@@ -22,21 +22,21 @@
   }
 }
 
-.navbar { padding-bottom: 0; }
+.navbar .nav-link {
+  padding-bottom: 1rem;
+  margin-bottom: -1rem;
+}
 
 .navbar .nav-link {
   font-weight: $font-weight-bold;
   font-size: 15px;
-  color: $uba-white;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
   &:hover,
   &.hover,
   &:focus,
   &.focus,
   &:active,
   &.active {
-    color: $uba-white;
+    color: $uba-white !important;
     background-color: $uba-blue;
   }
 }
