@@ -20,16 +20,16 @@
     color: $uba-white;
     background-color: $uba-blue;
   }
-}
-
-.navbar .nav-link {
-  padding-bottom: 1rem;
-  margin-bottom: -1rem;
+  &.disabled {
+    color: $uba-gray;
+  }
 }
 
 .navbar .nav-link {
   font-weight: $font-weight-bold;
   font-size: 15px;
+  padding-bottom: 1rem;
+  margin-bottom: -1rem;
   &:hover,
   &.hover,
   &:focus,

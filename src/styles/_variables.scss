@@ -40,13 +40,17 @@ $nav-link-disabled-color: $uba-gray;
 $nav-link-padding-y: .725rem;
 $nav-link-padding-x: 1rem;
 
-$nav-tabs-border-color:             transparent;
-$nav-tabs-border-width:             none;
-$nav-tabs-border-radius:            0px;
-$nav-tabs-link-hover-border-color:  transparent;
-$nav-tabs-link-active-color:        $uba-white;
-$nav-tabs-link-active-bg:           $uba-blue;
+$nav-tabs-border-color: transparent;
+$nav-tabs-border-width: none;
+$nav-tabs-border-radius: 0px;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-link-active-color: $uba-white;
+$nav-tabs-link-active-bg: $uba-blue;
 $nav-tabs-link-active-border-color: transparent;
+
+$navbar-dark-disabled-color: $uba-gray;
+$navbar-light-disabled-color: $uba-gray;
+$dropdown-link-disabled-color: $uba-gray;
 
 $nav-pills-border-radius: 0px;
 
