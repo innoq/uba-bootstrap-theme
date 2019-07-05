@@ -1,0 +1,60 @@
+.navbar.navbar-dark .nav-link {
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  color: $uba-white;
+  padding-bottom: 1.75rem;
+  margin-bottom: -1.25rem;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-white;
+    background-color: $uba-blue;
+  }
+  &.disabled {
+    color: $uba-gray;
+  }
+}
+
+.navbar.navbar-light .nav-link {
+  font-size: 15px;
+  font-weight: $font-weight-bold;
+  color: $uba-gray-dark;
+  padding-bottom: 1.75rem;
+  margin-bottom: -1.25rem;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-white;
+    background-color: $uba-blue;
+  }
+  &.disabled {
+    color: $uba-gray;
+  }
+}
+
+.collapse.navbar-collapse.show .nav-link {
+  @include media-breakpoint-down(md) {
+    padding: .75rem;
+    margin: 0 0 .25rem 0;
+  }
+}
+
+.navbar .form-inline .btn {
+  color: $uba-white;
+  background-color: $uba-blue;
+  border-color: $uba-blue;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &.active,
+  &.active {
+    background-color: $uba-blue-dark;
+  }
+}

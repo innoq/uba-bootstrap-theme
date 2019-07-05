@@ -29,59 +29,90 @@ $btn-active-box-shadow: none;
 // Links
 //
 
-$link-hover-color: $uba-gray;
 $link-hover-decoration: none;
 
 //
-// Nav
+// Disabled Links
 //
 
-$nav-link-disabled-color: $uba-gray;
-$nav-link-padding-y: .725rem;
-$nav-link-padding-x: 1rem;
+$navbar-dark-disabled-color:        $uba-gray;
+$navbar-light-disabled-color:       $uba-gray;
+$dropdown-link-disabled-color:      $uba-gray;
 
-$nav-tabs-border-color: transparent;
-$nav-tabs-border-width: none;
-$nav-tabs-border-radius: 0px;
-$nav-tabs-link-hover-border-color: transparent;
-$nav-tabs-link-active-color: $uba-white;
-$nav-tabs-link-active-bg: $uba-blue;
-$nav-tabs-link-active-border-color: transparent;
+//
+// Navs
+//
 
-$navbar-dark-color: rgba($uba-white, 1);
-$navbar-dark-disabled-color: $uba-gray;
-$navbar-light-disabled-color: $uba-gray;
-$dropdown-link-disabled-color: $uba-gray;
+$nav-link-padding-y:                .75rem;
+$nav-link-padding-x:                1rem;
 
-$nav-pills-border-radius: 0px;
+$nav-link-disabled-color:           $uba-gray;
 
+$nav-tabs-border-color:             $uba-blue;
+$nav-tabs-border-width:             0px;
+$nav-tabs-border-radius:            0px;
+$nav-tabs-link-active-color:        $uba-white;
+$nav-tabs-link-active-bg:           $uba-blue;
+
+$nav-pills-link-active-color:       $uba-white;
+$nav-pills-link-active-bg:          $uba-blue;
+
+$nav-divider-color:                 $uba-gray-dark;
+
+//
+// Navbar
+//
+
+$navbar-padding-y:                  1rem;
+$navbar-padding-x:                  1.25rem;
+$navbar-nav-link-padding-x:         .75rem;
+$navbar-brand-font-size:            1rem;
+
+$navbar-dark-color:                 $uba-white;
+$navbar-dark-hover-color:           $uba-white;
+$navbar-dark-active-color:          $uba-white;
+$navbar-dark-disabled-color:        $uba-gray;
+$navbar-dark-toggler-border-color:  $uba-blue;
+
+$navbar-light-color:                $uba-gray-dark;
+$navbar-light-hover-color:          $uba-white;
+$navbar-light-active-color:         inherit;
+$navbar-light-disabled-color:       $uba-gray;
+$navbar-light-toggler-border-color: $uba-blue;
+
+$navbar-light-brand-color:                $uba-blue;
+$navbar-light-brand-hover-color:          $uba-blue-dark;
+$navbar-dark-brand-color:                 $uba-white;
+$navbar-dark-brand-hover-color:           $uba-gray-light;
+
+
+//
 // Dropdowns
 //
 // Dropdown menu container and contents.
 //
 
-$dropdown-min-width:                10rem;
-$dropdown-padding-y:                0px;
-$dropdown-spacer:                   .125rem;
+$dropdown-padding-y:                0;
+$dropdown-spacer:                   1px;
+$dropdown-font-size:                15px;
 $dropdown-color:                    $uba-white;
 $dropdown-bg:                       $uba-blue;
-$dropdown-border-color:             transparent;
-$dropdown-border-radius:            0px;
-$dropdown-border-width:             none;
+$dropdown-border-color:             $uba-blue;
+$dropdown-border-radius:            0;
+$dropdown-border-width:             0;
+$dropdown-inner-border-radius:      0;
 $dropdown-divider-bg:               $uba-blue-dark;
-$dropdown-divider-margin-y:         0px;
+$dropdown-divider-margin-y:         0;
 $dropdown-box-shadow:               none;
 
 $dropdown-link-color:               $uba-white;
 $dropdown-link-hover-color:         $uba-gray-dark;
 $dropdown-link-hover-bg:            $uba-gray-light;
 
-$dropdown-link-active-color:        $uba-blue;
+$dropdown-link-active-color:        $uba-gray-dark;
 $dropdown-link-active-bg:           $uba-gray-light;
 
 $dropdown-link-disabled-color:      $uba-gray;
 
-$dropdown-item-padding-y:           1rem;
+$dropdown-item-padding-y:           .75rem;
 $dropdown-item-padding-x:           1rem;
-
-$dropdown-header-color:             $uba-white;

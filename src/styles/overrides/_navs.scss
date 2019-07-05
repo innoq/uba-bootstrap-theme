@@ -8,8 +8,9 @@
 .bd-sidenav { background-image: none; }
 
 .nav .nav-link {
-  font-weight: $font-weight-bold;
   font-size: 15px;
+  font-weight: $font-weight-bold;
+  color: $uba-white;
   &:hover,
   &.hover,
   &:focus,
@@ -21,30 +22,5 @@
   }
   &.disabled {
     color: $uba-gray;
-  }
-}
-
-.navbar .nav-link {
-  font-weight: $font-weight-bold;
-  font-size: 15px;
-  padding-bottom: 1.5rem;
-  margin-bottom: -1.5rem;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    color: $uba-white !important;
-    background-color: $uba-blue;
-  }
-}
-
-.navbar-collapse {
-  &.show {
-    .navbar-nav .nav-link {
-      margin-bottom: .5rem;
-      padding: .5rem;
-    }
   }
 }

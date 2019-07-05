@@ -2,9 +2,6 @@
 //
 // Dropdown menu container and contents.
 //
-.nav {
-  .dropdown-menu { margin-top: 10px; }
-  .dropdown-item { font-weight: $font-weight-bold; }
-}
 
-.navbar { .dropdown-menu { margin-top: 24px; } }
+.nav .dropdown-menu { margin-top: 10px; }
+.navbar .dropdown-menu { margin-top: 28px; }

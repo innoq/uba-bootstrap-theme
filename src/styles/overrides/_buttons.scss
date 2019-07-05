@@ -15,17 +15,3 @@
     border-color: $uba-blue;
   }
 }
-
-.navbar .form-inline .btn {
-  color: $uba-white;
-  background-color: $uba-blue;
-  border-color: $uba-blue;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &.active,
-  &.active {
-    background-color: $uba-blue-dark;
-  }
-}
