@@ -1,0 +1,35 @@
+//
+// Footer
+//
+
+main {
+  min-height: 100vh;
+  margin-bottom: -316px;
+}
+
+.footer, .sidemap {
+  border-top: 1px solid rgba($uba-gray, .25);
+  background-color: $uba-gray-light;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.sidemap {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 0;
+
+  .text-centered { text-align: center; }
+
+  .list-unstyled {
+    display: inline-flex;
+
+    li {
+      margin-right: .5rem;
+    }
+  }
+}
