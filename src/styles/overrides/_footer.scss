@@ -4,7 +4,7 @@
 
 main {
   min-height: 100vh;
-  margin-bottom: -316px;
+  margin-bottom: -316px; // tbd Height of Sitemap + Footer
 }
 
 .footer, .sitemap {
@@ -28,8 +28,7 @@ main {
   .list-unstyled {
     display: inline-flex;
 
-    li {
-      margin-right: .5rem;
-    }
+    li { margin-right: 0 .5rem 0 0; }
+    li.nav-link { padding: 0; }
   }
 }
