@@ -23,12 +23,5 @@ main {
   padding-top: 1rem;
   padding-bottom: 0;
 
-  .text-centered { text-align: center; }
-
-  .list-unstyled {
-    display: inline-flex;
-
-    li { margin-right: 0 .5rem 0 0; }
-    a.nav-link { padding: 0; }
-  }
+  .list-unstyled { display: inline-flex; }
 }
