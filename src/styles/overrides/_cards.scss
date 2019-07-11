@@ -4,8 +4,22 @@
 
 .card-header {
   color: $uba-white;
+  padding: 1rem .75rem;
   background: linear-gradient(to right, transparent, $uba-green, $uba-green),
       url('../images/bg-card-pattern.png');
+}
+
+.card-link {
+  font-weight: bold;
+  color: $uba-blue;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-blue-large;
+  }
 }
 
 .border-primary {
