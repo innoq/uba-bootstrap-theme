@@ -1,3 +1,7 @@
+.cards {
+  margin-bottom: .1rem;
+}
+
 .card-header {
   color: $uba-white;
   background: linear-gradient(to right, transparent, $uba-green, $uba-green),
@@ -5,6 +9,6 @@
 }
 
 .border-primary {
-  border: 10px solid $uba-gray-light;
-  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light 1%) 10;
+  border: 15px solid $uba-gray-light;
+  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light 1.5%) 15;
 }
