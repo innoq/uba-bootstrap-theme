@@ -6,7 +6,7 @@ h1, h2, h3 {
   font-family: 'MetaSerifComp-Medium';
 	src: url('../fonts/MetaSerifWeb-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/MetaSerifWeb-Medium.woff') format('woff');
 
-  margin: 0;
+  margin-bottom: .5rem;
 }
 
 a { font-weight: $font-weight-bold; }
