@@ -94,11 +94,8 @@ $navbar-light-brand-hover-color:          $uba-blue-dark;
 $navbar-dark-brand-color:                 $uba-white;
 $navbar-dark-brand-hover-color:           $uba-gray-light;
 
-
 //
 // Dropdowns
-//
-// Dropdown menu container and contents.
 //
 
 $dropdown-padding-y:                0;
@@ -125,3 +122,34 @@ $dropdown-link-disabled-color:      $uba-gray;
 
 $dropdown-item-padding-y:           .75rem;
 $dropdown-item-padding-x:           1rem;
+
+//
+// Cards
+//
+
+$card-bg:                           $uba-gray-light;
+$card-border-color:                 none;
+
+//
+// List Group
+//
+
+$list-group-color:                  $uba-gray;
+$list-group-bg:                     $uba-gray-light;
+$list-group-border-color:           rgba($uba-gray, .5);
+
+$list-group-item-padding-y:         1rem;
+
+$list-group-hover-bg:               $uba-blue;
+$list-group-active-color:           $uba-white;
+$list-group-active-bg:              $uba-blue;
+$list-group-active-border-color:    $uba-blue-dark;
+
+$list-group-disabled-color:         rgba($uba-gray, .5);
+$list-group-disabled-bg:            transparent;
+
+$list-group-action-color:           $uba-gray;
+$list-group-action-hover-color:     $uba-white;
+
+$list-group-action-active-color:    $uba-white;
+$list-group-action-active-bg:       $uba-blue;
