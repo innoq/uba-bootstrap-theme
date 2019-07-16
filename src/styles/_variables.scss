@@ -32,6 +32,16 @@ $btn-box-shadow: none;
 $btn-focus-box-shadow: none;
 $btn-active-box-shadow: none;
 
+// Breadcrumbs
+
+$breadcrumb-padding-y:              .5rem;
+
+$breadcrumb-bg:                     $uba-white;
+$breadcrumb-divider-color:          $uba-gray;
+$breadcrumb-active-color:           $uba-gray;
+$breadcrumb-divider:                quote(">");
+
+
 //
 // Links
 //
