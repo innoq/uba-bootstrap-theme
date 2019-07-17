@@ -1,8 +1,23 @@
+.card { min-width: 250px; }
+
 .card-header {
+  font-family: 'MetaSerifComp-Medium';
+  font-size: 1.25rem;
   color: $uba-white;
-  padding: 1.25rem 1.25rem .5rem 1.25rem;
-  background: linear-gradient(to right, transparent, $uba-green, $uba-green),
-      url('../images/bg-card-pattern.png');
+  padding: 1rem 1.25rem .5rem 1.25rem;
+
+  &.featured {
+    background: linear-gradient(to right, transparent, $uba-green, $uba-green),
+        url('../images/bg-card-pattern.png');
+  }
+
+  &.list-header { background: $uba-blue; }
+}
+
+.card-body {
+  h2, h3, h4, p {
+    margin-bottom: 0;
+  }
 }
 
 .card-link {

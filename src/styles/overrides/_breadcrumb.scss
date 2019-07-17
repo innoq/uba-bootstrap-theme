@@ -6,4 +6,16 @@
 
 .breadcrumb-item {
   font-size: .825rem;
+
+  a {
+    color: $uba-gray;
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: $uba-blue;
+    }
+  }
 }
