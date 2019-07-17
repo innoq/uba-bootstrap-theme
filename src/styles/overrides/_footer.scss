@@ -12,6 +12,18 @@ main {
   background-color: $uba-gray-light;
   padding-top: 2rem;
   padding-bottom: 1rem;
+
+  a {
+    color: $uba-gray;
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: $uba-blue;
+    }
+  }
 }
 
 .sitemap {
