@@ -163,3 +163,17 @@ $list-group-action-hover-color:     $uba-white;
 
 $list-group-action-active-color:    $uba-white;
 $list-group-action-active-bg:       $uba-blue;
+
+//
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-color:                 $uba-gray;
+$table-accent-bg:             $uba-gray-light;
+$table-hover-color:           $uba-blue;
+$table-hover-bg:              $uba-gray-light;
+$table-active-bg:             $uba-gray-light;
+$table-border-color:          rgba($uba-gray, .25);
+$table-head-bg:               $uba-gray-light;
+$table-head-color:            $uba-gray-dark;
