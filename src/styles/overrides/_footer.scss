@@ -27,12 +27,18 @@ main {
 }
 
 .sitemap {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
   padding-top: 2rem;
   padding-bottom: 1rem;
   margin-top: 2rem;
 }
 
 .footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
   padding-top: 1rem;
   padding-bottom: 0;
 
