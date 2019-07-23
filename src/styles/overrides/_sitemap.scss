@@ -1,8 +1,8 @@
 //
-// Footer
+// Sitemap
 //
 
-.footer {
+.sitemap {
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -10,6 +10,7 @@
   background-color: $uba-gray-light;
   padding-top: 2rem;
   padding-bottom: 1rem;
+
 
   a {
     color: $uba-gray;
@@ -22,6 +23,4 @@
       color: $uba-blue;
     }
   }
-
-  .list-unstyled { display: inline-flex; }
 }
