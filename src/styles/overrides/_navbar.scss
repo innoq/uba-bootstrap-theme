@@ -1,3 +1,9 @@
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    height: 96px;
+  }
+}
+
 .navbar.navbar-dark .nav-link {
   font-size: 15px;
   font-weight: $font-weight-bold;
