@@ -42,3 +42,17 @@
   border: 15px solid $uba-gray-light;
   border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light 1.5%) 15;
 }
+
+.card-profiles {
+  margin: -.5rem;
+  .card {
+    max-width: 349px;
+    @include media-breakpoint-down('md') {
+      max-width: 434px;
+    }
+  }
+  .card-img-top {
+    height: 150px;
+    background-color: #6FB75D;
+  }
+}
