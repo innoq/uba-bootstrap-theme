@@ -44,12 +44,10 @@
 }
 
 .card-profile {
-  max-width: 349px;
-  @include media-breakpoint-down('md') {
-    max-width: 434px;
-  }
+  max-width: none;
+
   .card-img-top {
     height: 150px;
-    background-color: #6FB75D;
+    background-color: $uba-green;
   }
 }
