@@ -1,6 +1,6 @@
 {
   "name": "uba-bootstrap-theme",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "UBA branded Bootstrap 4 theme",
   "scripts": {
     "dist": "./scripts/dist",
