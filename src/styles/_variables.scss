@@ -68,8 +68,8 @@ $nav-link-padding-x:                1rem;
 $nav-link-disabled-color:           $uba-gray;
 
 $nav-tabs-border-color:             $uba-blue;
-$nav-tabs-border-width:             0px;
-$nav-tabs-border-radius:            0px;
+$nav-tabs-border-width:             1px;
+$nav-tabs-border-radius:            $border-radius;
 $nav-tabs-link-active-color:        $uba-white;
 $nav-tabs-link-active-bg:           $uba-blue;
 
