@@ -7,8 +7,8 @@
   padding: 1rem 1.25rem .5rem 1.25rem;
 
   &.featured {
-    background: linear-gradient(to right, transparent, $uba-green, $uba-green),
-        url('../images/bg-card-pattern.png');
+    background-image: url("../images/bg-highlight.png");
+    background: linear-gradient(to right,rgba(255,255,255,0) 0%,#5ead35 40%,#5ead35 100%);
   }
 
   &.list-header { background: $uba-blue; }
