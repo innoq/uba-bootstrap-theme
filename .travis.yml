@@ -1,0 +1,19 @@
+language: node_js
+cache: yarn
+node_js:
+- '11'
+script:
+- yarn test
+- yarn dist
+git:
+  submodules: false
+notifications:
+deploy:
+- provider: npm
+  skip_cleanup: true
+  email: till.schulte-coerne@innoq.com
+  api_key:
+    secure: TODO
+  on:
+    tags: true
+    repo: innoq/uba-bootstrap-theme

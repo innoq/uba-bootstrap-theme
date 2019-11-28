@@ -1,0 +1,27 @@
+//
+// Sitemap
+//
+
+.sitemap {
+  position: absolute;
+  bottom: 115px;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid rgba($uba-gray, .25);
+  border-bottom: none;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-image: url('../images/bg-box-pattern.png');
+
+  a {
+    color: $uba-gray;
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: $uba-blue;
+    }
+  }
+}

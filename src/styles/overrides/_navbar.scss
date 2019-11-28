@@ -1,0 +1,66 @@
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    height: 96px;
+  }
+}
+
+.navbar {
+  border-bottom: 10px solid $uba-blue;
+  &.bg-dark {
+    background-image: url('../images/bg-header-pattern.png');
+  }
+  &.bg-light {
+    background-image: url('../images/bg-box-pattern.png');
+   }
+
+  &.navbar-light .navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: $font-weight-bold;
+    color: $uba-gray-dark;
+    padding-bottom: 2.5rem;
+    margin-bottom: -1.75rem;
+    &:hover, &.hover,
+    &:focus, &.focus,
+    &:active, &.active {
+      color: $uba-blue;
+    }
+    &.disabled {
+      color: $uba-gray;
+    }
+  }
+
+  &.navbar-dark .navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: $font-weight-bold;
+    color: $uba-white;
+    padding-bottom: 2.5rem;
+    margin-bottom: -1.75rem;
+    &:hover, &.hover,
+    &:focus, &.focus,
+    &:active, &.active {
+      color: $uba-white;
+      background-color: $uba-blue;
+    }
+    &.disabled {
+      color: $uba-gray;
+    }
+  }
+
+  .form-inline .btn {
+    color: $uba-white;
+    background-color: $uba-blue;
+    border-color: $uba-blue;
+    &:hover, &.hover,
+    &:focus, &.focus,
+    &:active, &.active {
+      background-color: $uba-blue-dark;
+    }
+  }
+}
+
+.collapse.navbar-collapse.show .nav-link {
+  @include media-breakpoint-down(md) {
+    padding: .75rem;
+    margin: 0 0 .25rem 0;
+  }
+}

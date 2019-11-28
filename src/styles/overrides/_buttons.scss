@@ -1,0 +1,29 @@
+//
+// Buttons
+//
+
+.btn { padding-bottom: .375rem; }
+
+.btn-link {
+  color: $uba-blue;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-gray-dark;
+  }
+}
+
+.btn-secondary {
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: $uba-blue;
+    border-color: $uba-blue;
+  }
+}

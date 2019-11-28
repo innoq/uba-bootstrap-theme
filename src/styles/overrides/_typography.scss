@@ -1,0 +1,13 @@
+//
+// Headlines
+//
+
+h1, h2, h3 {
+  font-family: 'MetaSerifComp-Medium';
+	src: url('../fonts/MetaSerifWeb-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/MetaSerifWeb-Medium.woff') format('woff');
+
+  margin-bottom: .5rem;
+}
+
+p { width: -webkit-fill-available; }
+a { font-weight: $font-weight-bold; }

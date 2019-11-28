@@ -1,0 +1,58 @@
+.card { min-width: 250px; }
+
+.card-header {
+  font-family: 'MetaSerifComp-Medium';
+  font-size: 1.25rem;
+  color: $uba-white;
+  padding: 1rem 1.25rem .5rem 1.25rem;
+
+  &.featured {
+    background: linear-gradient(to right, transparent, $uba-green, $uba-green),
+        url('../images/bg-card-pattern.png');
+  }
+
+  &.list-header { background: $uba-blue; }
+}
+
+.card-body {
+  h2, h3, h4, p {
+    margin-bottom: 0;
+  }
+  .text-box {
+    padding: 1rem;
+
+    background-color: $uba-white;
+  }
+}
+
+.card-link {
+  font-weight: bold;
+  color: $uba-blue;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: $uba-blue-dark;
+  }
+}
+
+.border-primary {
+  border: 15px solid $uba-gray-light;
+  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light .75%) 15;
+}
+
+.border-secondary {
+  border: 15px solid $uba-gray-light;
+  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light 1.5%) 15;
+}
+
+.card-profile {
+  max-width: none;
+
+  .card-img-top {
+    height: 150px;
+    background-color: $uba-green;
+  }
+}

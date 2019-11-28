@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -ex
+
+mkdir -p dist/
+yarn run compile
+
+if [ "$TRAVIS_TAG" != "" ]; then
+  mkdir -p dist/css/$TRAVIS_TAG
+  cp dist/css/uba-bootstrap-theme.css dist/css/$TRAVIS_TAG/uba-bootstrap-theme.css
+
+  zip -r uba-bootstrap-theme-$TRAVIS_TAG.zip src/ dist/ package.json README.md LICENSE
+fi

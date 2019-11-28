@@ -1,0 +1,6 @@
+.list-group-item {
+  &:disabled,
+  &.disabled {
+    background-image: url('../images/bg-box-pattern.png');
+  }
+}

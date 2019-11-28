@@ -1,0 +1,21 @@
+.breadcrumb {
+  border-top: 1px solid $uba-gray-light;
+  border-bottom: 1px solid $uba-gray-light;
+  margin: 1rem;
+}
+
+.breadcrumb-item {
+  font-size: .825rem;
+
+  a {
+    color: $uba-gray;
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: $uba-blue;
+    }
+  }
+}
