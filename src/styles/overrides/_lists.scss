@@ -1,6 +1,6 @@
 .list-group-item {
   &:disabled,
   &.disabled {
-    background-image: url('../images/bg-box-pattern.png');
+    background-image: asset-url('bg-box-pattern.png');
   }
 }
