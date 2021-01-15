@@ -35,5 +35,7 @@
     "npm-run-all": "^4.1.2",
     "sass-lint": "^1.12.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
