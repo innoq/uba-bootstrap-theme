@@ -4,7 +4,7 @@
 
 h1, h2, h3 {
   font-family: 'MetaSerifComp-Medium';
-	src: url('../fonts/MetaSerifWeb-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/MetaSerifWeb-Medium.woff') format('woff');
+  src: asset-url('MetaSerifWeb-Medium.eot') format('embedded-opentype'), asset-url('MetaSerifWeb-Medium.woff') format('woff');
 
   margin-bottom: .5rem;
 }

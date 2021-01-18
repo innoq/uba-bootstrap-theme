@@ -35,5 +35,11 @@ module.exports = {
       source: './src/styles/index.scss',
       target: './dist/css/uba-bootstrap-theme.css'
     }
-  ]
+  ],
+  manifest: {
+    target: "./dist/manifest.json",
+    key: "short",
+    baseURI: "../",
+    webRoot: "./dist"
+  },
 }

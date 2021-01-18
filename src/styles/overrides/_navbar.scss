@@ -7,10 +7,10 @@
 .navbar {
   border-bottom: 10px solid $uba-blue;
   &.bg-dark {
-    background-image: url('../images/bg-header-pattern.png');
+    background-image: asset-url('bg-header-pattern.png');
   }
   &.bg-light {
-    background-image: url('../images/bg-box-pattern.png');
+    background-image: asset-url('bg-box-pattern.png');
    }
 
   &.navbar-light .navbar-nav .nav-link {
