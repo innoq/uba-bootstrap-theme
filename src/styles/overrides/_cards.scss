@@ -7,8 +7,7 @@
   padding: 1rem 1.25rem .5rem 1.25rem;
 
   &.featured {
-    background-image: asset-url("bg-highlight.png");
-    background: linear-gradient(to right,rgba(255,255,255,0) 0%,#5ead35 40%,#5ead35 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(94, 173, 53) 40%, rgb(94, 173, 53) 100%), asset-url("bg-highlight.png");
   }
 
   &.list-header { background: $uba-blue; }
