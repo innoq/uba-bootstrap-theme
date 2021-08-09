@@ -1,6 +1,6 @@
 $uba-green: #5EAD35;
 $uba-green-dark: #007626;
-$uba-blue: #0081C7;  // Linkfarbe
+$uba-blue: darken(#0081C7, 4.7%);  // Linkfarbe => Originalfarbe zu hell für AAA-Kontrast (ARIA). Daher 4.7% dunkler.
 $uba-blue-dark: #005E82;
 $uba-white: #FFFFFF;
 $uba-gray-light: #EDEDED;
