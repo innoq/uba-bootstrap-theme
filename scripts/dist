@@ -2,7 +2,7 @@
 set -ex
 
 mkdir -p dist/
-yarn run compile
+npm run compile
 
 if [ "$TRAVIS_TAG" != "" ]; then
   mkdir -p dist/css/$TRAVIS_TAG

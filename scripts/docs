@@ -3,14 +3,14 @@ set -ex
 
 cd bootstrap
 
-echo "" > site/_includes/ads.html
+# echo "" > site/_includes/ads.html
 
 npm install
 
-bundle install
+# bundle install
 
 npm run docs-compile
 
-cp -R _gh_pages/* ../documentation
+cp -R _site/* ../documentation
 
 cd ..
