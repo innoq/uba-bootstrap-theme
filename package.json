@@ -1,7 +1,7 @@
 {
   "name": "uba-bootstrap-theme",
-  "version": "0.2.8",
-  "description": "UBA branded Bootstrap 4 theme",
+  "version": "0.3.0",
+  "description": "UBA branded Bootstrap 5 theme",
   "scripts": {
     "dist": "./scripts/dist",
     "start": "npm-run-all --parallel server-watch compile-watch",
