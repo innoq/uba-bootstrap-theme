@@ -59,7 +59,7 @@
 }
 
 .collapse.navbar-collapse.show .nav-link {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     padding: .75rem;
     margin: 0 0 .25rem 0;
   }
