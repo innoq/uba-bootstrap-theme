@@ -1,23 +1,19 @@
 //
 // Footer
 //
-
-.footer-links  {
-  display: flex;
-  flex-direction: column;
-
-  ul { margin-bottom: .5rem; }
-}
-
 .footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 115px;
-  border-top: 1px solid rgba($uba-gray, .25);
+  @extend .navbar-light;
+
   background-color: $uba-gray-light;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  font-family: "MetaCompPro-Bold", sans-serif;
+  font-size: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid rgba($uba-gray, .25);
+
+  img {
+    height: 40px;
+    margin-top: -4px;
+  }
 
   a {
     color: $uba-gray;
@@ -31,5 +27,4 @@
     }
   }
 
-  .list-unstyled { display: inline-flex; }
 }
