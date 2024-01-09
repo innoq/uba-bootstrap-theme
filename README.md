@@ -1,8 +1,8 @@
-# UBA Bootstrap 4 Theme
+# UBA Bootstrap 5 Theme
 
 ## Usage
 
-This theme is a complete replacement for Bootstrap 4. You do not need to include
+This theme is a complete replacement for Bootstrap 5.3. You do not need to include
 both, `bootstrap.css` and `uba-bootstrap-theme.css`. The latter is sufficient.
 
     npm install uba-bootstrap-theme --save
@@ -24,8 +24,7 @@ please head over to
 ## Development
 
 ### Setup
-
-* Install ruby 2.3 or higher
+*
 * Install node v8.9 or higher
 
 * Clone project `git clone git@github.com:innoq/uba-bootstrap-theme.git`
