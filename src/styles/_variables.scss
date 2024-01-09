@@ -49,6 +49,7 @@ $breadcrumb-divider:                quote(">") !default;
 $link-color:                        $uba-blue !default;
 $link-hover-color:                  $uba-gray !default;
 $link-hover-decoration:             none !default;
+$link-decoration:                   none !default;
 
 //
 // Disabled Links
@@ -170,7 +171,7 @@ $list-group-action-active-bg:       $uba-blue !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-color:                 $uba-gray !default;
-$table-accent-bg:             $uba-gray-light !default;
+$table-accent-bg:             transparent;
 $table-hover-color:           $uba-blue !default;
 $table-hover-bg:              $uba-gray-light !default;
 $table-active-bg:             $uba-gray-light !default;
