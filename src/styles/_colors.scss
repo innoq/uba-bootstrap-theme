@@ -1,6 +1,8 @@
+@use 'sass:color';
+
 $uba-green: #5EAD35;
 $uba-green-dark: #007626;
-$uba-blue: darken(#0081C7, 4.7%);  // Linkfarbe => Originalfarbe zu hell für AAA-Kontrast (ARIA). Daher 4.7% dunkler.
+$uba-blue: color.adjust(#0081C7, $lightness: -4.7%);  // Linkfarbe => Originalfarbe zu hell für AAA-Kontrast (ARIA). Daher 4.7% dunkler.
 $uba-blue-dark: #005E82;
 $uba-white: #FFFFFF;
 $uba-gray-light: #EDEDED;
