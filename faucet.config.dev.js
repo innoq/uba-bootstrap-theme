@@ -11,7 +11,7 @@ module.exports = {
     // Copy stuff for bootstrap documentation
     {
       source: './dist/css/uba-bootstrap-theme.css',
-      target: './documentation/docs/5.3/dist/css/bootstrap.css'
+      target: './documentation/docs/5.3/dist/css/bootstrap.min.css'
     },
     {
       source: './dist/fonts',
