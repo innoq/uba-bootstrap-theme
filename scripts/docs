@@ -9,8 +9,13 @@ npm install
 
 # bundle install
 
-npm run docs-compile
+npm run docs
 
 cp -R _site/* ../documentation
+
+cd ../documentation
+
+find . -type f -name '*.html' -print0 \
+  | xargs -0 sed -r -i.bak 's/[[:space:]]+integrity=(\"[^\"]*\"|'\''[^'\'']*'\'')//g'
 
 cd ..
