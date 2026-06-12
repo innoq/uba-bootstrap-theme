@@ -4,6 +4,22 @@
 // See https://getbootstrap.com/docs/5.3/getting-started/theming/
 
 $font-family-sans-serif: MetaCompPro-Normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif: "MetaSerifComp-Medium", Georgia, "Times New Roman", Times, serif !default;
+$font-family-bold: "MetaCompPro-Bold", #{$font-family-sans-serif} !default;
+
+// Pfad zu den Schriftdateien. Default passt zum Standalone-dist (dist/css → ../fonts)
+// und zu faucet-Apps (public/assets/stylesheets → ../fonts). Vom Consumer
+// überschreibbar, z. B. für propshaft (logischer Name) oder abweichende Ablage:
+//   @import vorher:  $uba-fonts-path: "uba-bootstrap-theme";
+$uba-fonts-path: "../fonts" !default;
+
+//
+// Background patterns (diagonal stripes; replace former 6×6 PNG tiles)
+//
+
+$uba-pattern-box:       repeating-linear-gradient(-45deg, $uba-pattern-line 0 1.4px, transparent 1.4px 4.24px) !default;
+$uba-pattern-header:    repeating-linear-gradient(-45deg, $uba-pattern-header-line 0 1.4px, $uba-pattern-header-base 1.4px 4.24px) !default;
+$uba-pattern-highlight: repeating-linear-gradient(-45deg, $uba-pattern-highlight-3 0 1.4px, $uba-pattern-highlight-2 1.4px 2.8px, $uba-pattern-highlight-1 2.8px 4.24px) !default;
 
 //
 // General styles
@@ -141,7 +157,7 @@ $dropdown-item-padding-x:           1rem !default;
 //
 
 $card-bg:                           $uba-gray-light !default;
-$card-border-color:                 none !default;
+$card-border-color:                 transparent !default;
 
 //
 // List Group

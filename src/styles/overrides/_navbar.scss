@@ -7,18 +7,18 @@
 .navbar {
   border-bottom: 10px solid $uba-blue;
   &.bg-dark {
-    background-image: asset-url('bg-header-pattern.png');
+    background-image: $uba-pattern-header;
   }
   &.bg-light {
-    background-image: asset-url('bg-box-pattern.png');
+    background-image: $uba-pattern-box;
    }
 
   &.navbar-light .navbar-nav .nav-link {
+    margin-bottom: -1.75rem;
+    padding-bottom: 2.5rem;
+    color: $uba-gray-dark;
     font-size: 15px;
     font-weight: $font-weight-bold;
-    color: $uba-gray-dark;
-    padding-bottom: 2.5rem;
-    margin-bottom: -1.75rem;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
@@ -30,16 +30,16 @@
   }
 
   &.navbar-dark .navbar-nav .nav-link {
+    margin-bottom: -1.75rem;
+    padding-bottom: 2.5rem;
+    color: $uba-white;
     font-size: 15px;
     font-weight: $font-weight-bold;
-    color: $uba-white;
-    padding-bottom: 2.5rem;
-    margin-bottom: -1.75rem;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
-      color: $uba-white;
       background-color: $uba-blue;
+      color: $uba-white;
     }
     &.disabled {
       color: $uba-gray;
@@ -47,9 +47,9 @@
   }
 
   .btn {
-    color: $uba-white;
-    background-color: $uba-blue;
     border-color: $uba-blue;
+    background-color: $uba-blue;
+    color: $uba-white;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
@@ -60,7 +60,7 @@
 
 .collapse.navbar-collapse.show .nav-link {
   @include media-breakpoint-down(lg) {
-    padding: .75rem;
     margin: 0 0 .25rem 0;
+    padding: .75rem;
   }
 }

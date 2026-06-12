@@ -3,11 +3,8 @@
 //
 
 h1, h2, h3 {
-  font-family: 'MetaSerifComp-Medium';
-  src: asset-url('MetaSerifWeb-Medium.eot') format('embedded-opentype'), asset-url('MetaSerifWeb-Medium.woff') format('woff');
-
   margin-bottom: .5rem;
+  font-family: $font-family-serif;
 }
 
-p { width: -webkit-fill-available; }
 a { font-weight: $font-weight-bold; }

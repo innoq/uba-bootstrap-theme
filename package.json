@@ -1,15 +1,18 @@
 {
   "name": "uba-bootstrap-theme",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "description": "UBA branded Bootstrap 5 theme",
   "scripts": {
-    "dist": "./scripts/dist",
-    "start": "npm-run-all --parallel server-watch compile-watch",
-    "server-watch": "live-server ./documentation",
-    "compile": "faucet",
-    "compile-watch": "faucet --watch --config=faucet.config.dev.js",
-    "install-docs": "./scripts/docs",
-    "test": "sass-lint -v -q"
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
+    "css-prefix": "postcss --config build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\"",
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "assets": "node build/copy-assets.mjs",
+    "dist": "npm-run-all css assets",
+    "watch": "sass --watch --style expanded src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
+    "serve": "live-server --open=/static/showcase.html",
+    "start": "npm-run-all --parallel watch serve",
+    "test": "stylelint \"src/**/*.scss\""
   },
   "repository": {
     "type": "git",
@@ -28,11 +31,25 @@
   "homepage": "https://github.com/innoq/uba-bootstrap-theme#readme",
   "style": "dist/css/uba-bootstrap-theme.css",
   "sass": "src/styles/index.scss",
+  "files": [
+    "src",
+    "dist",
+    "bootstrap/scss",
+    "bootstrap/dist/js",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
-    "faucet-pipeline-sass": "^1.8.0",
-    "faucet-pipeline-static": "^2.1.0",
-    "live-server": "^1.2.0",
+    "autoprefixer": "^10.4.19",
+    "clean-css-cli": "^5.6.3",
+    "live-server": "^1.2.2",
     "npm-run-all": "^4.1.5",
-    "sass-lint": "^1.13.1"
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.0",
+    "stylelint": "^16.6.0",
+    "stylelint-config-concentric-order": "^5.5.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^8.1.1"
   }
 }

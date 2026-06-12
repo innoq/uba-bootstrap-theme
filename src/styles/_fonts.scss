@@ -1,27 +1,31 @@
 @font-face {
 	font-family: 'MetaCompPro-Normal';
-	src: asset-url('MetaWebPro-Normal.eot') format('embedded-opentype'), asset-url('MetaWebPro-Normal.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaWebPro-Normal.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaWebPro-Normal.woff') format('woff'), url('#{$uba-fonts-path}/MetaWebPro-Normal.eot') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'MetaCompPro-Bold';
-	src: asset-url('MetaWebPro-Bold.eot') format('embedded-opentype'), asset-url('MetaWebPro-Bold.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaWebPro-Bold.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaWebPro-Bold.woff') format('woff'), url('#{$uba-fonts-path}/MetaWebPro-Bold.eot') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'MetaSerifComp-Bold';
-	src: asset-url('MetaSerifWeb-Bold.eot') format('embedded-opentype'), asset-url('MetaSerifWeb-Bold.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaSerifWeb-Bold.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaSerifWeb-Bold.woff') format('woff'), url('#{$uba-fonts-path}/MetaSerifWeb-Bold.eot') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'MetaSerifComp-Medium';
-	src: asset-url('MetaSerifWeb-Medium.eot') format('embedded-opentype'), asset-url('MetaSerifWeb-Medium.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaSerifWeb-Medium.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaSerifWeb-Medium.woff') format('woff'), url('#{$uba-fonts-path}/MetaSerifWeb-Medium.eot') format('embedded-opentype');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }

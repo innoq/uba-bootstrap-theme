@@ -5,13 +5,13 @@
 .sitemap {
   position: absolute;
   bottom: 115px;
-  width: 100%;
-  height: auto;
   border-top: 1px solid rgba($uba-gray, .25);
   border-bottom: none;
+  background-image: $uba-pattern-box;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  background-image: asset-url('bg-box-pattern.png');
+  width: 100%;
+  height: auto;
 
   a {
     color: $uba-gray;

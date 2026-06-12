@@ -15,6 +15,14 @@ $uba-yellow-dark: #D3812E;
 $uba-red: #CE2f6A;
 $uba-red-dark: #7C003D;
 
+// Diagonal-stripe background pattern colors (replace former 6×6 PNG tiles)
+$uba-pattern-line:        #D7D7D7; // light grey diagonal (box pattern, on transparent)
+$uba-pattern-header-base: #575757; // dark navbar stripes
+$uba-pattern-header-line: #464646;
+$uba-pattern-highlight-1: #61B931; // featured card-header stripes (UBA greens)
+$uba-pattern-highlight-2: #55B131;
+$uba-pattern-highlight-3: #349B2E;
+
 $primary:       $uba-blue;
 $secondary:     $uba-gray;
 $success:       $uba-green;
