@@ -1,0 +1,19 @@
+//
+// Skip navigation link — visually hidden until focused (WCAG 2.4.1)
+//
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  background-color: $uba-blue-dark;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: $uba-white;
+  font-weight: $font-weight-bold;
+
+  &:focus {
+    top: 0;
+    color: $uba-white;
+  }
+}

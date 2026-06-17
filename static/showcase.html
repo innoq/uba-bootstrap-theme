@@ -13,34 +13,68 @@
 </head>
 <body>
 
-<!-- Navbars (zeigen die Diagonal-Muster: bg-light / bg-dark) -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">Umweltprobenbank</a>
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link active" href="#">Start</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Steckbriefe</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Datenrecherche</a></li>
-      <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
-    </ul>
+<div class="container py-4 border-bottom mb-2">
+  <h1>UBA Bootstrap Theme – Component Showcase</h1>
+  <p class="lead">Alle wichtigen Bootstrap-Komponenten plus UBA-Sonderkomponenten, mit dem Theme gerendert.</p>
+</div>
+
+<div class="container">
+  <h2 class="pt-4 pb-2">Navbar (Dark)</h2>
+</div>
+
+<!-- Site-Header (full-width) -->
+<header class="site-header bg-dark">
+  <div class="site-header-brand">
+    <a href="#"><img src="/dist/images/upb-brand.png" alt="UBA" height="60"></a>
   </div>
-</nav>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">navbar-dark (bg-dark Muster)</a>
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link active" href="#">Start</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Mehr</a></li>
-    </ul>
+  <div class="site-header-right">
+    <nav class="navbar navbar-expand navbar-upper navbar-dark" aria-label="Servicemenü">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Leichte Sprache</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gebärdensprache</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">English</a></li>
+      </ul>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Hauptnavigation">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Recherche</a>
+            <a class="dropdown-item" href="#">Karten</a>
+            <a class="dropdown-item" href="#">Downloads</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
 <div class="container">
 
-  <header class="py-4">
-    <h1>UBA Bootstrap Theme – Component Showcase</h1>
-    <p class="lead">Alle wichtigen Bootstrap-Komponenten plus UBA-Sonderkomponenten, mit dem Theme gerendert.</p>
-  </header>
+  <section>
+    <h2>Navbar (Light)</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Beispiel helle Navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">UPB</a>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Recherche</a>
+              <a class="dropdown-item" href="#">Karten</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
 
   <section>
     <h2>Schriften</h2>
@@ -51,28 +85,30 @@
       </thead>
       <tbody>
         <tr>
-          <td>Überschriften (h1–h3)</td>
-          <td><code>$font-family-serif</code><br><small class="text-muted">MetaSerifComp-Medium → Georgia, Times, serif</small></td>
-          <td style="font-family: 'MetaSerifComp-Medium', Georgia, serif; font-size: 1.5rem">Umweltprobenbank</td>
+          <td>Überschriften (h1–h6)</td>
+          <td><code>$font-family-serif</code><br><small class="text-muted">Meta Serif → Georgia, Times, serif</small></td>
+          <td style="font-family: 'Meta Serif', Georgia, serif; font-size: 1.5rem">Umweltprobenbank</td>
         </tr>
         <tr>
           <td>Fließtext / Body</td>
-          <td><code>$font-family-sans-serif</code><br><small class="text-muted">MetaCompPro-Normal → System-Sans, sans-serif</small></td>
-          <td style="font-size: 1.1rem">Umweltprobenbank — Franz jagt 0123</td>
+          <td><code>$font-family-sans-serif</code><br><small class="text-muted">Meta → System-Sans, sans-serif</small></td>
+          <td>Umweltprobenbank — Franz jagt 0123</td>
         </tr>
         <tr>
-          <td>Fett-Schnitt (Footer)</td>
-          <td><code>$font-family-bold</code><br><small class="text-muted">MetaCompPro-Bold → System-Sans</small></td>
-          <td style="font-family: 'MetaCompPro-Bold', sans-serif; font-size: 1.1rem">Umweltprobenbank</td>
+          <td>Fett-Schnitt (Footer etc.)</td>
+          <td><code>$font-family-bold</code><br><small class="text-muted">Meta (bold) → System-Sans</small></td>
+          <td style="font-family: 'Meta', sans-serif; font-weight: bold">Umweltprobenbank</td>
         </tr>
       </tbody>
     </table>
 
     <h3 class="mt-4">Überschriften-Größen</h3>
-    <h1>H1 · 1.5rem</h1>
-    <h2>H2 · 1.25rem</h2>
-    <h3>H3 · 1rem</h3>
-    <h4>H4 · 0.75rem</h4>
+    <h1>H1 · 2.188rem (~35px) · line-height 1.2</h1>
+    <h2>H2 · 1.75rem (~28px) · line-height 1.25</h2>
+    <h3>H3 · 1.438rem (~23px) · line-height 1.3</h3>
+    <h4>H4 · 1.313rem (~21px) · line-height 1.3</h4>
+    <h5>H5 · 1.313rem (~21px) · line-height 1.3</h5>
+    <h6>H6 · 1.313rem (~21px) · line-height 1.3</h6>
     <p class="lead mt-3">Lead-Absatz.</p>
     <p>Normaler Fließtext mit <a href="#">Link</a>, <strong>fett</strong> und <em>kursiv</em>.</p>
   </section>
@@ -102,31 +138,32 @@
     <div class="row row-cols-2 row-cols-md-4 g-2 mb-4">
       <div class="col"><div class="swatch" style="background: #5EAD35"></div><small><code>$uba-green</code> · #5EAD35</small></div>
       <div class="col"><div class="swatch" style="background: #007626"></div><small><code>$uba-green-dark</code> · #007626</small></div>
-      <div class="col"><div class="swatch bg-primary"></div><small><code>$uba-blue</code> · #0081C7 *</small></div>
-      <div class="col"><div class="swatch" style="background: #005E82"></div><small><code>$uba-blue-dark</code> · #005E82</small></div>
-      <div class="col"><div class="swatch" style="background: #955DA2"></div><small><code>$uba-purple</code> · #955DA2</small></div>
-      <div class="col"><div class="swatch" style="background: #592D65"></div><small><code>$uba-purple-dark</code> · #592D65</small></div>
-      <div class="col"><div class="swatch" style="background: #FBB93A"></div><small><code>$uba-yellow</code> · #FBB93A</small></div>
-      <div class="col"><div class="swatch" style="background: #D3812E"></div><small><code>$uba-yellow-dark</code> · #D3812E</small></div>
-      <div class="col"><div class="swatch" style="background: #CE2F6A"></div><small><code>$uba-red</code> · #CE2F6A</small></div>
-      <div class="col"><div class="swatch" style="background: #7C003D"></div><small><code>$uba-red-dark</code> · #7C003D</small></div>
-      <div class="col"><div class="swatch border" style="background: #EDEDED"></div><small><code>$uba-gray-light</code> · #EDEDED</small></div>
-      <div class="col"><div class="swatch" style="background: #666666"></div><small><code>$uba-gray</code> · #666666</small></div>
-      <div class="col"><div class="swatch" style="background: #333333"></div><small><code>$uba-gray-dark</code> · #333333</small></div>
+      <div class="col"><div class="swatch" style="background: #009BD5"></div><small><code>$uba-blue</code> · #009BD5</small></div>
+      <div class="col"><div class="swatch" style="background: #005F85"></div><small><code>$uba-blue-dark</code> · #005F85</small></div>
+      <div class="col"><div class="swatch" style="background: #2C8ABC"></div><small><code>$uba-web-blue</code> · #2C8ABC</small></div>
+      <div class="col"><div class="swatch" style="background: #9D579A"></div><small><code>$uba-purple</code> · #9D579A</small></div>
+      <div class="col"><div class="swatch" style="background: #622F63"></div><small><code>$uba-purple-dark</code> · #622F63</small></div>
+      <div class="col"><div class="swatch" style="background: #FABB00"></div><small><code>$uba-yellow</code> · #FABB00</small></div>
+      <div class="col"><div class="swatch" style="background: #D78400"></div><small><code>$uba-yellow-dark</code> · #D78400</small></div>
+      <div class="col"><div class="swatch" style="background: #CE1F5E"></div><small><code>$uba-red</code> · #CE1F5E</small></div>
+      <div class="col"><div class="swatch" style="background: #83053C"></div><small><code>$uba-red-dark</code> · #83053C</small></div>
+      <div class="col"><div class="swatch border" style="background: #F0F1F1"></div><small><code>$uba-gray-light</code> · #F0F1F1</small></div>
+      <div class="col"><div class="swatch" style="background: #C8C8C8"></div><small><code>$uba-gray-medium</code> · #C8C8C8</small></div>
+      <div class="col"><div class="swatch" style="background: #4B4B4D"></div><small><code>$uba-gray</code> · #4B4B4D</small></div>
+      <div class="col"><div class="swatch" style="background: #404040"></div><small><code>$uba-gray-dark</code> · #404040</small></div>
       <div class="col"><div class="swatch border" style="background: #FFFFFF"></div><small><code>$uba-white</code> · #FFFFFF</small></div>
     </div>
     <p class="text-muted mb-1"><small>Bootstrap-Zuordnung (zeigt die echten Theme-Werte)</small></p>
     <div class="row row-cols-2 row-cols-md-4 g-2">
-      <div class="col"><div class="swatch bg-primary"></div><small>primary → <code>$uba-blue</code></small></div>
+      <div class="col"><div class="swatch bg-primary"></div><small>primary → <code>$uba-web-blue</code></small></div>
       <div class="col"><div class="swatch bg-secondary"></div><small>secondary → <code>$uba-gray</code></small></div>
       <div class="col"><div class="swatch bg-success"></div><small>success → <code>$uba-green</code></small></div>
       <div class="col"><div class="swatch bg-info"></div><small>info → <code>$uba-green</code></small></div>
       <div class="col"><div class="swatch bg-warning"></div><small>warning → <code>$uba-yellow</code></small></div>
       <div class="col"><div class="swatch bg-danger"></div><small>danger → <code>$uba-red</code></small></div>
       <div class="col"><div class="swatch bg-light border"></div><small>light → <code>$uba-gray-light</code></small></div>
-      <div class="col"><div class="swatch bg-dark"></div><small>dark → <code>$uba-gray</code></small></div>
+      <div class="col"><div class="swatch bg-dark"></div><small>dark → <code>$uba-gray-dark</code></small></div>
     </div>
-    <p class="mt-2 mb-0"><small class="text-muted">* <code>$uba-blue</code> = #0081C7, um 4,7 % abgedunkelt für WCAG-AAA-Kontrast.</small></p>
   </section>
 
   <section>
@@ -193,19 +230,19 @@
       </div>
       <div class="col-md-4">
         <div class="card">
-          <h5 class="card-header featured">featured (grüner Verlauf)</h5>
+          <h5 class="card-header featured">featured (grüner Hintergrund)</h5>
           <div class="card-body">
-            <p class="card-text text-box">card-header.featured mit Diagonal-Highlight.</p>
+            <p class="card-text">card-header.featured</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <h5 class="card-header list-header">list-header</h5>
+          <h5 class="card-header list-header">list-header (blauer Hintergrund)</h5>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Eintrag</li>
             <li class="list-group-item active">Aktiv</li>
-            <li class="list-group-item disabled">Deaktiviert (Muster)</li>
+            <li class="list-group-item disabled">Deaktiviert</li>
           </ul>
         </div>
       </div>
@@ -232,7 +269,7 @@
         <input class="form-control" id="i1" placeholder="Eingabe …">
       </div>
       <div class="col-md-6">
-        <label class="label-for-select" for="s1">Auswahl</label>
+        <label class="form-label" for="s1">Auswahl</label>
         <select class="form-select" id="s1">
           <option>Ökosysteme</option>
           <option>Probenarten</option>

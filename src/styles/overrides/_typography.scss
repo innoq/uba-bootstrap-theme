@@ -2,9 +2,13 @@
 // Headlines
 //
 
-h1, h2, h3 {
-  margin-bottom: .5rem;
+h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-serif;
 }
+
+h1 { line-height: 1.2; }
+
+h3, h4, h5, h6 { line-height: 1.3; }
+
 
 a { font-weight: $font-weight-bold; }

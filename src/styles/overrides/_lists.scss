@@ -1,6 +1,6 @@
 .list-group-item {
   &:disabled,
   &.disabled {
-    background-image: $uba-pattern-box;
+    background-color: $uba-gray-light;
   }
 }

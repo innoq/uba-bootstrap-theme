@@ -1,28 +1,58 @@
 @media (min-width: 992px) {
-  .navbar-expand-lg {
-    height: 96px;
+  .navbar-expand-lg:not(.sitemap, .footer) {
+    height: 80px;
+  }
+
+  // Hover background bleeds down to the 8px bottom border.
+  // margin-bottom pulls the link flush with the border; padding-bottom fills the visual gap.
+  .navbar-expand-lg.navbar-dark .navbar-nav .nav-link,
+  .navbar-expand-lg.navbar-light .navbar-nav .nav-link {
+    margin-bottom: -1rem;
+    padding-bottom: 1.75rem;
   }
 }
 
-.navbar {
-  border-bottom: 10px solid $uba-blue;
-  &.bg-dark {
-    background-image: $uba-pattern-header;
+// Site header: logo spanning full header height, utility nav + main nav stacked on the right.
+.site-header {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 8px solid $uba-web-blue;
+}
+
+.site-header-brand {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 0 $navbar-padding-x;
+
+  img {
+    width: auto;
+    height: 60px;
   }
-  &.bg-light {
-    background-image: $uba-pattern-box;
-   }
+}
+
+.site-header-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.navbar {
+  border-bottom: 8px solid $uba-web-blue;
+
+  // Inside .site-header the outer wrapper carries the border — no double line.
+  .site-header & {
+    border-bottom: none;
+  }
 
   &.navbar-light .navbar-nav .nav-link {
-    margin-bottom: -1.75rem;
-    padding-bottom: 2.5rem;
     color: $uba-gray-dark;
-    font-size: 15px;
     font-weight: $font-weight-bold;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
-      color: $uba-blue;
+      color: $uba-web-blue;
     }
     &.disabled {
       color: $uba-gray;
@@ -30,15 +60,14 @@
   }
 
   &.navbar-dark .navbar-nav .nav-link {
-    margin-bottom: -1.75rem;
-    padding-bottom: 2.5rem;
     color: $uba-white;
-    font-size: 15px;
+    // ≥18.67px bold = WCAG "large text" → 3:1 threshold; white on $uba-web-blue = ~3.54:1 passes AA
+    font-size: 1.25rem;
     font-weight: $font-weight-bold;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
-      background-color: $uba-blue;
+      background-color: $uba-web-blue;
       color: $uba-white;
     }
     &.disabled {
@@ -47,14 +76,48 @@
   }
 
   .btn {
-    border-color: $uba-blue;
-    background-color: $uba-blue;
+    border-color: $uba-web-blue;
+    background-color: $uba-web-blue;
     color: $uba-white;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
       background-color: $uba-blue-dark;
     }
+  }
+}
+
+// Slim utility/service bar above the main navigation.
+.navbar-upper {
+  border-bottom: none;
+  padding: 0 .4rem;
+  height: unset;
+
+  .navbar-nav {
+    flex-wrap: wrap;
+  }
+
+  // Reset the tall main-nav link treatment for this compact bar.
+  &.navbar-dark .navbar-nav .nav-link,
+  &.navbar-light .navbar-nav .nav-link {
+    margin: 0;
+    padding: .5rem 1rem;
+    line-height: 1;
+    font-size: .875rem;
+  }
+
+  &.navbar-dark .navbar-nav .nav-link {
+    color: $uba-gray-medium;
+    &:hover, &.hover,
+    &:focus, &.focus,
+    &:active, &.active {
+      background-color: transparent;
+      color: $uba-white;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: none;
   }
 }
 

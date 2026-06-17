@@ -7,10 +7,10 @@
   font-size: 1.25rem;
 
   &.featured {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(94, 173, 53) 40%, rgb(94, 173, 53) 100%), $uba-pattern-highlight;
+    background-color: $uba-green;
   }
 
-  &.list-header { background: $uba-blue; }
+  &.list-header { background-color: $uba-web-blue; }
 }
 
 .card-body {
@@ -24,7 +24,7 @@
 }
 
 .card-link {
-  color: $uba-blue;
+  color: $uba-web-blue;
   font-weight: bold;
   &:hover,
   &.hover,
@@ -34,16 +34,6 @@
   &.active {
     color: $uba-blue-dark;
   }
-}
-
-.border-primary {
-  border: 15px solid $uba-gray-light;
-  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light .75%) 15;
-}
-
-.border-secondary {
-  border: 15px solid $uba-gray-light;
-  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light 1.5%) 15;
 }
 
 .card-profile {

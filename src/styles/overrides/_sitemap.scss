@@ -1,27 +1,10 @@
 //
-// Sitemap
+// Sitemap — visual styles live in _footer.scss (sitemap is a footer component).
+// Only structural layout helpers here.
 //
 
 .sitemap {
-  position: absolute;
-  bottom: 115px;
-  border-top: 1px solid rgba($uba-gray, .25);
-  border-bottom: none;
-  background-image: $uba-pattern-box;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 2rem 1rem 1rem;
   width: 100%;
-  height: auto;
-
-  a {
-    color: $uba-gray;
-    &:hover,
-    &.hover,
-    &:focus,
-    &.focus,
-    &:active,
-    &.active {
-      color: $uba-blue;
-    }
-  }
 }
+

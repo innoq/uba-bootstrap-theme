@@ -1,33 +1,25 @@
-@use 'sass:color';
-
 $uba-green: #5EAD35;
 $uba-green-dark: #007626;
-$uba-blue: color.adjust(#0081C7, $lightness: -4.7%);  // Linkfarbe => Originalfarbe zu hell für AAA-Kontrast (ARIA). Daher 4.7% dunkler.
-$uba-blue-dark: #005E82;
+$uba-blue: #009BD5;             // Markenfarbe (Logos, Illustrationen)
+$uba-blue-dark: #005F85;
+$uba-web-blue: #2C8ABC;         // Primär-/Linkfarbe auf umweltbundesamt.de
 $uba-white: #FFFFFF;
-$uba-gray-light: #EDEDED;
-$uba-gray: #666666;
-$uba-gray-dark: #333333; // Textfarbe
-$uba-purple: #955dA2;
-$uba-purple-dark: #592D65;
-$uba-yellow: #FBB93A;
-$uba-yellow-dark: #D3812E;
-$uba-red: #CE2f6A;
-$uba-red-dark: #7C003D;
+$uba-gray-light: #F0F1F1;
+$uba-gray-medium: #C8C8C8;
+$uba-gray: #4B4B4D;
+$uba-gray-dark: #404040;        // Textfarbe + Header-Hintergrund
+$uba-purple: #9D579A;
+$uba-purple-dark: #622F63;
+$uba-yellow: #FABB00;
+$uba-yellow-dark: #D78400;
+$uba-red: #CE1F5E;
+$uba-red-dark: #83053C;
 
-// Diagonal-stripe background pattern colors (replace former 6×6 PNG tiles)
-$uba-pattern-line:        #D7D7D7; // light grey diagonal (box pattern, on transparent)
-$uba-pattern-header-base: #575757; // dark navbar stripes
-$uba-pattern-header-line: #464646;
-$uba-pattern-highlight-1: #61B931; // featured card-header stripes (UBA greens)
-$uba-pattern-highlight-2: #55B131;
-$uba-pattern-highlight-3: #349B2E;
-
-$primary:       $uba-blue;
+$primary:       $uba-web-blue;
 $secondary:     $uba-gray;
 $success:       $uba-green;
 $info:          $uba-green;
 $warning:       $uba-yellow;
 $danger:        $uba-red;
 $light:         $uba-gray-light;
-$dark:          $uba-gray;
+$dark:          $uba-gray-dark;

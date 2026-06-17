@@ -4,4 +4,16 @@
 //
 
 .nav .dropdown-menu { margin-top: 10px; }
-.navbar .dropdown-menu { margin-top: 28px; }
+// Popper anchors to the nav-link's margin-box bottom (= border-box bottom + margin-bottom).
+// With margin-bottom: -1rem on the link and an 8px site-header border, adding calc(1rem + 8px)
+// moves the dropdown flush with the outer edge of the blue border.
+.navbar .dropdown-menu { margin-top: calc(1rem + 5px); }
+
+.navbar .dropdown-item {
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+}
+
+.dropdown-item + .dropdown-item {
+  border-top: 1px solid $dropdown-divider-bg;
+}

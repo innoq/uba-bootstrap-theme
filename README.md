@@ -2,10 +2,16 @@
 
 ## Usage
 
-This theme is a complete replacement for Bootstrap 5.3. You do not need to include
-both, `bootstrap.css` and `uba-bootstrap-theme.css`. The latter is sufficient.
+This theme is a complete replacement for Bootstrap 5.3. It already includes all of
+Bootstrap's styles, so you only need to include `uba-bootstrap-theme.css` — do not
+add Bootstrap's own `bootstrap.css` on top of it.
 
     npm install uba-bootstrap-theme --save
+
+The `dist/css/` directory contains two variants of the same stylesheet:
+
+- **`uba-bootstrap-theme.css`** — unminified, includes source maps; use this during development for readable CSS and accurate browser devtools references.
+- **`uba-bootstrap-theme.min.css`** — minified for production; smaller file size, same styles.
 
 If you like to use this theme in your own Sass code and installed this theme
 with NPM you can import the source files to your manifest (e.g. `index.scss`)
@@ -25,7 +31,7 @@ please head over to
 
 ### Setup
 *
-* Install node v8.9 or higher
+* Install node v20 or higher (LTS recommended)
 
 * Clone project `git clone git@github.com:innoq/uba-bootstrap-theme.git`
 * Go into the project folder `cd uba-bootstrap-theme`

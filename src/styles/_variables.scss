@@ -3,9 +3,10 @@
 // Variables
 // See https://getbootstrap.com/docs/5.3/getting-started/theming/
 
-$font-family-sans-serif: MetaCompPro-Normal, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-serif: "MetaSerifComp-Medium", Georgia, "Times New Roman", Times, serif !default;
-$font-family-bold: "MetaCompPro-Bold", #{$font-family-sans-serif} !default;
+$font-family-sans-serif: "Meta", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-serif: "Meta Serif", Georgia, "Times New Roman", Times, serif !default;
+// Bold is now a weight variant of Meta — use font-weight: bold alongside $font-family-sans-serif
+$font-family-bold: $font-family-sans-serif !default;
 
 // Pfad zu den Schriftdateien. Default passt zum Standalone-dist (dist/css → ../fonts)
 // und zu faucet-Apps (public/assets/stylesheets → ../fonts). Vom Consumer
@@ -14,37 +15,37 @@ $font-family-bold: "MetaCompPro-Bold", #{$font-family-sans-serif} !default;
 $uba-fonts-path: "../fonts" !default;
 
 //
-// Background patterns (diagonal stripes; replace former 6×6 PNG tiles)
-//
-
-$uba-pattern-box:       repeating-linear-gradient(-45deg, $uba-pattern-line 0 1.4px, transparent 1.4px 4.24px) !default;
-$uba-pattern-header:    repeating-linear-gradient(-45deg, $uba-pattern-header-line 0 1.4px, $uba-pattern-header-base 1.4px 4.24px) !default;
-$uba-pattern-highlight: repeating-linear-gradient(-45deg, $uba-pattern-highlight-3 0 1.4px, $uba-pattern-highlight-2 1.4px 2.8px, $uba-pattern-highlight-1 2.8px 4.24px) !default;
-
-//
 // General styles
 //
 
-$border-radius: 2px !default;
-$border-radius-lg: 2px !default;
-$border-radius-sm: 2px !default;
+$border-radius: 4px !default;
+$border-radius-lg: 4px !default;
+$border-radius-sm: 4px !default;
+
+// Body text uses the UBA dark gray (#404040), matching umweltbundesamt.de —
+// not Bootstrap's default near-black ($gray-900).
+$body-color: $uba-gray-dark !default;
 
 $font-size-base:              1rem !default;
-$h1-font-size:                $font-size-base * 1.5 !default;
-$h2-font-size:                $font-size-base * 1.25 !default;
-$h3-font-size:                $font-size-base * 1 !default;
-$h4-font-size:                $font-size-base * .75 !default;
-$h5-font-size:                $font-size-base * .5 !default;
+$headings-margin-bottom:      1.25rem !default;
+$headings-line-height:        1.25 !default;
+$headings-font-weight:        700 !default;
+$h1-font-size:                2.188rem !default;
+$h2-font-size:                1.75rem !default;
+$h3-font-size:                1.438rem !default;
+$h4-font-size:                1.313rem !default;
+$h5-font-size:                1.313rem !default;
+$h6-font-size:                1.313rem !default;
 
 //
 // Buttons
 //
 
 $btn-font-weight: 700 !default;
-$btn-font-size: 15px !default;
+$btn-font-size: $font-size-base !default;
 $btn-padding-y: .625rem !default;
 $btn-padding-x: .625rem !default;
-$btn-line-height: 1.333333rem !default;
+$btn-line-height: 1.3 !default;
 
 $btn-box-shadow: none !default;
 $btn-focus-box-shadow: none !default;
@@ -64,7 +65,7 @@ $breadcrumb-divider:                string.quote(">") !default;
 // Links
 //
 
-$link-color:                        $uba-blue !default;
+$link-color:                        $uba-web-blue !default;
 $link-hover-color:                  $uba-gray !default;
 $link-hover-decoration:             none !default;
 $link-decoration:                   none !default;
@@ -86,14 +87,14 @@ $nav-link-padding-x:                1rem !default;
 
 $nav-link-disabled-color:           $uba-gray !default;
 
-$nav-tabs-border-color:             $uba-blue !default;
+$nav-tabs-border-color:             $uba-web-blue !default;
 $nav-tabs-border-width:             1px !default;
 $nav-tabs-border-radius:            $border-radius !default;
 $nav-tabs-link-active-color:        $uba-white !default;
-$nav-tabs-link-active-bg:           $uba-blue !default;
+$nav-tabs-link-active-bg:           $uba-web-blue !default;
 
 $nav-pills-link-active-color:       $uba-white !default;
-$nav-pills-link-active-bg:          $uba-blue !default;
+$nav-pills-link-active-bg:          $uba-web-blue !default;
 
 $nav-divider-color:                 $uba-gray-dark !default;
 
@@ -110,13 +111,13 @@ $navbar-dark-color:                 $uba-white !default;
 $navbar-dark-hover-color:           $uba-white !default;
 $navbar-dark-active-color:          $uba-white !default;
 $navbar-dark-disabled-color:        $uba-gray !default;
-$navbar-dark-toggler-border-color:  $uba-blue !default;
+$navbar-dark-toggler-border-color:  $uba-web-blue !default;
 
 $navbar-light-color:                $uba-gray-dark !default;
 $navbar-light-hover-color:          $uba-white !default;
 $navbar-light-active-color:         inherit !default;
 $navbar-light-disabled-color:       $uba-gray !default;
-$navbar-light-toggler-border-color: $uba-blue !default;
+$navbar-light-toggler-border-color: $uba-web-blue !default;
 
 $navbar-light-brand-color:                $uba-blue !default;
 $navbar-light-brand-hover-color:          $uba-blue-dark !default;
@@ -129,10 +130,12 @@ $navbar-dark-brand-hover-color:           $uba-gray-light !default;
 
 $dropdown-padding-y:                0 !default;
 $dropdown-spacer:                   1px !default;
-$dropdown-font-size:                15px !default;
+// Match the main-nav link size (1rem) so an expanded menu stays in visual
+// harmony with the navbar it drops from, instead of jumping to body size.
+$dropdown-font-size:                1rem !default;
 $dropdown-color:                    $uba-white !default;
-$dropdown-bg:                       $uba-blue !default;
-$dropdown-border-color:             $uba-blue !default;
+$dropdown-bg:                       $uba-web-blue !default;
+$dropdown-border-color:             $uba-web-blue !default;
 $dropdown-border-radius:            0 !default;
 $dropdown-border-width:             0 !default;
 $dropdown-inner-border-radius:      0 !default;
@@ -153,6 +156,13 @@ $dropdown-item-padding-y:           .75rem !default;
 $dropdown-item-padding-x:           1rem !default;
 
 //
+// Forms
+//
+
+$input-font-size:                   1rem !default;
+$form-select-font-size:             1rem !default;
+
+//
 // Cards
 //
 
@@ -169,9 +179,9 @@ $list-group-border-color:           rgba($uba-gray, .5) !default;
 
 $list-group-item-padding-y:         1rem !default;
 
-$list-group-hover-bg:               $uba-blue !default;
+$list-group-hover-bg:               $uba-web-blue !default;
 $list-group-active-color:           $uba-white !default;
-$list-group-active-bg:              $uba-blue !default;
+$list-group-active-bg:              $uba-web-blue !default;
 $list-group-active-border-color:    $uba-blue-dark !default;
 
 $list-group-disabled-color:         rgba($uba-gray, .5) !default;
@@ -181,16 +191,15 @@ $list-group-action-color:           $uba-gray !default;
 $list-group-action-hover-color:     $uba-white !default;
 
 $list-group-action-active-color:    $uba-white !default;
-$list-group-action-active-bg:       $uba-blue !default;
+$list-group-action-active-bg:       $uba-web-blue !default;
 
 //
 // Tables
 //
-// Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-color:                 $uba-gray !default;
 $table-accent-bg:             transparent;
-$table-hover-color:           $uba-blue !default;
+$table-hover-color:           $uba-web-blue !default;
 $table-hover-bg:              $uba-gray-light !default;
 $table-active-bg:             $uba-gray-light !default;
 $table-border-color:          rgba($uba-gray, .25) !default;
