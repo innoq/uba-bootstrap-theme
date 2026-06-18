@@ -74,8 +74,11 @@ $link-decoration:                   none !default;
 // Disabled Links
 //
 
-$navbar-dark-disabled-color:        $uba-gray !default;
-$navbar-light-disabled-color:       $uba-gray !default;
+// Disabled needs a clearly muted tone: $uba-gray (#4B4B4D) sits too close to the
+// body/nav text colour to read as disabled. $uba-gray-medium stays perceivable on
+// dark and clearly greyed-out on light.
+$navbar-dark-disabled-color:        $uba-gray-medium !default;
+$navbar-light-disabled-color:       $uba-gray-medium !default;
 $dropdown-link-disabled-color:      $uba-gray !default;
 
 //
@@ -84,6 +87,11 @@ $dropdown-link-disabled-color:      $uba-gray !default;
 
 $nav-link-padding-y:                .75rem !default;
 $nav-link-padding-x:                1rem !default;
+
+// Nav links share one size across light & dark navbars (the compact .navbar-upper
+// resets it). ≥18.67px bold = WCAG "large text" → 3:1; white on $uba-web-blue ~3.54:1 AA.
+$nav-link-font-size:                1.25rem !default;
+$nav-link-font-weight:              700 !default;
 
 $nav-link-disabled-color:           $uba-gray !default;
 
@@ -110,13 +118,12 @@ $navbar-brand-font-size:            1rem !default;
 $navbar-dark-color:                 $uba-white !default;
 $navbar-dark-hover-color:           $uba-white !default;
 $navbar-dark-active-color:          $uba-white !default;
-$navbar-dark-disabled-color:        $uba-gray !default;
+// $navbar-dark-disabled-color is set once in the "Disabled Links" section above.
 $navbar-dark-toggler-border-color:  $uba-web-blue !default;
 
 $navbar-light-color:                $uba-gray-dark !default;
 $navbar-light-hover-color:          $uba-white !default;
 $navbar-light-active-color:         inherit !default;
-$navbar-light-disabled-color:       $uba-gray !default;
 $navbar-light-toggler-border-color: $uba-web-blue !default;
 
 $navbar-light-brand-color:                $uba-blue !default;

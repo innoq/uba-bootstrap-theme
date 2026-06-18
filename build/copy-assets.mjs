@@ -9,7 +9,12 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..")
 
 const copies = [
   ["src/fonts", "dist/fonts"],
-  ["src/images", "dist/images"]
+  ["src/images", "dist/images"],
+  // Bootstrap's prebuilt JS bundle, so the published package and the static
+  // demo pages are self-contained for plain <script> consumers. Bundler-based
+  // consumers import the ESM via src/js/index.js instead.
+  ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", "dist/js/bootstrap.bundle.min.js"],
+  ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map", "dist/js/bootstrap.bundle.min.js.map"]
 ]
 
 for (const [from, to] of copies) {

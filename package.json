@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "UBA branded Bootstrap 5 theme",
   "scripts": {
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --pkg-importer=node src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
     "css-prefix": "postcss --config build/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "assets": "node build/copy-assets.mjs",
     "dist": "npm-run-all css assets",
-    "watch": "sass --watch --style expanded src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
+    "watch": "sass --watch --style expanded --pkg-importer=node src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
     "serve": "live-server --open=/static/showcase.html",
     "start": "npm-run-all --parallel watch serve",
-    "test": "stylelint \"src/**/*.scss\""
+    "test": "stylelint \"src/**/*.scss\"",
+    "prepublishOnly": "npm-run-all test dist"
   },
   "repository": {
     "type": "git",
@@ -31,11 +32,10 @@
   "homepage": "https://github.com/innoq/uba-bootstrap-theme#readme",
   "style": "dist/css/uba-bootstrap-theme.css",
   "sass": "src/styles/index.scss",
+  "main": "src/js/index.js",
   "files": [
     "src",
     "dist",
-    "bootstrap/scss",
-    "bootstrap/dist/js",
     "README.md",
     "LICENSE"
   ],
@@ -54,5 +54,8 @@
     "stylelint-config-concentric-order": "^5.5.0",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-order": "^8.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.8"
   }
 }

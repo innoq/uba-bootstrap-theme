@@ -43,3 +43,36 @@ please head over to
 Now you should see the Bootstrap documentation pages with UBA styling applied.
 `npm start` incorporates a watcher, so you can write code and see your
 changes immediately in the browser.
+
+## Releasing
+
+A release is published to npm by a maintainer bumping the version and
+publishing the corresponding GitHub Release. The actual `npm publish` runs in
+GitHub Actions (`.github/workflows/release.yml`) and authenticates to npm via
+[trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC) — no npm
+token is stored anywhere. The build (`npm run dist`) and linting (`npm test`)
+run automatically via the `prepublishOnly` hook.
+
+```sh
+npm version <patch|minor|major>   # bumps package.json + creates a git tag
+git push --follow-tags
+gh release create vX.Y.Z --generate-notes
+```
+
+Publishing the GitHub Release triggers the workflow, which builds and publishes
+the package to npm.
+
+### Manual fallback
+
+If the pipeline is unavailable, an npm owner can publish from their machine.
+The `prepublishOnly` hook still builds and lints first:
+
+```sh
+npm version <patch|minor|major>
+npm publish
+git push --follow-tags
+```
+
+Becoming a publisher requires npm owner rights (`npm owner add <user>
+uba-bootstrap-theme`, run by an existing owner) and 2FA enabled on your npm
+account.

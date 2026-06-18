@@ -46,24 +46,22 @@
     border-bottom: none;
   }
 
+  // Size & weight come from $nav-link-font-size / $nav-link-font-weight, so light
+  // and dark stay identical — only the colour treatment differs here.
   &.navbar-light .navbar-nav .nav-link {
     color: $uba-gray-dark;
-    font-weight: $font-weight-bold;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
       color: $uba-web-blue;
     }
     &.disabled {
-      color: $uba-gray;
+      color: $navbar-light-disabled-color;
     }
   }
 
   &.navbar-dark .navbar-nav .nav-link {
     color: $uba-white;
-    // ≥18.67px bold = WCAG "large text" → 3:1 threshold; white on $uba-web-blue = ~3.54:1 passes AA
-    font-size: 1.25rem;
-    font-weight: $font-weight-bold;
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
@@ -71,7 +69,7 @@
       color: $uba-white;
     }
     &.disabled {
-      color: $uba-gray;
+      color: $navbar-dark-disabled-color;
     }
   }
 

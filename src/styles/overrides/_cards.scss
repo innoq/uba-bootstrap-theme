@@ -6,8 +6,11 @@
   font-family: $font-family-serif;
   font-size: 1.25rem;
 
+  // Dark text on the green featured header: white (inherited above) only reaches
+  // ~2.6:1 on $uba-green, dark gray ~4.3:1.
   &.featured {
     background-color: $uba-green;
+    color: $uba-gray-dark;
   }
 
   &.list-header { background-color: $uba-web-blue; }

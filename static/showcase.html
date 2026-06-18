@@ -15,11 +15,12 @@
 
 <div class="container py-4 border-bottom mb-2">
   <h1>UBA Bootstrap Theme – Component Showcase</h1>
-  <p class="lead">Alle wichtigen Bootstrap-Komponenten plus UBA-Sonderkomponenten, mit dem Theme gerendert.</p>
+  <p class="lead">Alle wichtigen Bootstrap-Komponenten, mit dem Theme gerendert.</p>
+  <p class="text-muted"><small>Die UBA-Sonderkomponenten (Skip-Link, Sitemap, Footer, Card-Varianten) sind in <a href="/static/components.html">components.html</a> dokumentiert.</small></p>
 </div>
 
 <div class="container">
-  <h2 class="pt-4 pb-2">Navbar (Dark)</h2>
+  <h2 class="pt-4 pb-2">Navbar (Dark) – mit Servicemenü</h2>
 </div>
 
 <!-- Site-Header (full-width) -->
@@ -54,27 +55,97 @@
 </header>
 
 <div class="container">
+  <h2 class="pt-4 pb-2">Navbar (Dark) – ohne Servicemenü</h2>
+</div>
 
-  <section>
-    <h2>Navbar (Light)</h2>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Beispiel helle Navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">UPB</a>
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Recherche</a>
-              <a class="dropdown-item" href="#">Karten</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
-          <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
-        </ul>
-      </div>
+<!-- Site-Header ohne den oberen Servicemenü-Streifen -->
+<header class="site-header bg-dark">
+  <div class="site-header-brand">
+    <a href="#"><img src="/dist/images/upb-brand.png" alt="UBA" height="60"></a>
+  </div>
+  <div class="site-header-right">
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Hauptnavigation (ohne Servicemenü)">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Recherche</a>
+            <a class="dropdown-item" href="#">Karten</a>
+            <a class="dropdown-item" href="#">Downloads</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+      </ul>
     </nav>
-  </section>
+  </div>
+</header>
+
+<div class="container">
+  <h2 class="pt-4 pb-2">Navbar (Light) – mit Servicemenü</h2>
+</div>
+
+<!-- Site-Header (full-width) – identisch zum dunklen Header, nur helles Theme -->
+<header class="site-header bg-light">
+  <div class="site-header-brand">
+    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
+  </div>
+  <div class="site-header-right">
+    <nav class="navbar navbar-expand navbar-upper navbar-light" aria-label="Servicemenü (hell)">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Leichte Sprache</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gebärdensprache</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">English</a></li>
+      </ul>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Hauptnavigation (hell)">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Recherche</a>
+            <a class="dropdown-item" href="#">Karten</a>
+            <a class="dropdown-item" href="#">Downloads</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h2 class="pt-4 pb-2">Navbar (Light) – ohne Servicemenü</h2>
+</div>
+
+<!-- Site-Header (hell) ohne den oberen Servicemenü-Streifen -->
+<header class="site-header bg-light">
+  <div class="site-header-brand">
+    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
+  </div>
+  <div class="site-header-right">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Hauptnavigation hell (ohne Servicemenü)">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Recherche</a>
+            <a class="dropdown-item" href="#">Karten</a>
+            <a class="dropdown-item" href="#">Downloads</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
 
   <section>
     <h2>Schriften</h2>
@@ -263,22 +334,175 @@
 
   <section>
     <h2>Formular</h2>
-    <div class="row g-3">
+
+    <h3 class="mb-3">Texteingaben</h3>
+    <div class="row g-3 mb-4">
       <div class="col-md-6">
-        <label class="form-label" for="i1">Textfeld</label>
-        <input class="form-control" id="i1" placeholder="Eingabe …">
+        <label class="form-label" for="i-text">Textfeld</label>
+        <input type="text" class="form-control" id="i-text" placeholder="Eingabe …">
       </div>
       <div class="col-md-6">
-        <label class="form-label" for="s1">Auswahl</label>
-        <select class="form-select" id="s1">
-          <option>Ökosysteme</option>
-          <option>Probenarten</option>
-        </select>
+        <label class="form-label" for="i-email">E-Mail</label>
+        <input type="email" class="form-control" id="i-email" placeholder="name@uba.de">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="i-pass">Passwort</label>
+        <input type="password" class="form-control" id="i-pass" value="geheim">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="i-num">Zahl</label>
+        <input type="number" class="form-control" id="i-num" value="2024">
       </div>
       <div class="col-12">
-        <div class="form-check"><input class="form-check-input" type="checkbox" id="c1" checked><label class="form-check-label" for="c1">Checkbox</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="r" id="r1" checked><label class="form-check-label" for="r1">Radio</label></div>
-        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="sw1" checked><label class="form-check-label" for="sw1">Switch</label></div>
+        <label class="form-label" for="i-area">Mehrzeilig (textarea)</label>
+        <textarea class="form-control" id="i-area" rows="3">Probenbeschreibung …</textarea>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-sm">Klein (form-control-sm)</label>
+        <input type="text" class="form-control form-control-sm" id="i-sm" placeholder="sm">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-default">Standard</label>
+        <input type="text" class="form-control" id="i-default" placeholder="md">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-lg">Groß (form-control-lg)</label>
+        <input type="text" class="form-control form-control-lg" id="i-lg" placeholder="lg">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-disabled">Deaktiviert</label>
+        <input type="text" class="form-control" id="i-disabled" value="disabled" disabled>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-ro">Nur lesbar (readonly)</label>
+        <input type="text" class="form-control" id="i-ro" value="readonly" readonly>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-plain">Plaintext</label>
+        <input type="text" class="form-control-plaintext" id="i-plain" value="upb@uba.de" readonly>
+      </div>
+    </div>
+
+    <h3 class="mb-3">Spezielle Eingaben</h3>
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <label class="form-label" for="i-date">Datum</label>
+        <input type="date" class="form-control" id="i-date" value="2024-06-18">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-color">Farbe</label>
+        <input type="color" class="form-control form-control-color" id="i-color" value="#2C8ABC">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-file">Datei-Upload</label>
+        <input type="file" class="form-control" id="i-file">
+      </div>
+      <div class="col-md-8">
+        <label class="form-label" for="i-range">Schieberegler (range)</label>
+        <input type="range" class="form-range" id="i-range" min="0" max="100" value="40">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="i-list">Mit Vorschlägen (datalist)</label>
+        <input class="form-control" list="dl-eco" id="i-list" placeholder="Ökosystem …">
+        <datalist id="dl-eco">
+          <option value="Fließgewässer"></option>
+          <option value="Wald"></option>
+          <option value="Marin"></option>
+        </datalist>
+      </div>
+    </div>
+
+    <h3 class="mb-3">Auswahllisten</h3>
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <label class="form-label" for="sel-single">Auswahl</label>
+        <select class="form-select" id="sel-single">
+          <option selected>Ökosysteme</option>
+          <option>Probenarten</option>
+          <option>Analyte</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="sel-sm">Klein (form-select-sm)</label>
+        <select class="form-select form-select-sm" id="sel-sm">
+          <option selected>Option A</option>
+          <option>Option B</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="sel-multi">Mehrfachauswahl</label>
+        <select class="form-select" id="sel-multi" multiple size="3">
+          <option selected>Brassen</option>
+          <option>Miesmuschel</option>
+          <option selected>Buchenblätter</option>
+        </select>
+      </div>
+    </div>
+
+    <h3 class="mb-3">Checkboxen &amp; Switches</h3>
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c1" checked><label class="form-check-label" for="c1">Standard-Checkbox</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c2"><label class="form-check-label" for="c2">Nicht ausgewählt</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c3" disabled><label class="form-check-label" for="c3">Deaktiviert</label></div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ci1" checked><label class="form-check-label" for="ci1">Inline 1</label></div>
+        <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="ci2"><label class="form-check-label" for="ci2">Inline 2</label></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="sw1" checked><label class="form-check-label" for="sw1">Switch (an)</label></div>
+        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="sw2"><label class="form-check-label" for="sw2">Switch (aus)</label></div>
+      </div>
+    </div>
+
+    <h3 class="mb-3">Radio-Buttons &amp; Fieldset</h3>
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <fieldset>
+          <legend class="fs-5">Probenmatrix</legend>
+          <div class="form-check"><input class="form-check-input" type="radio" name="matrix" id="m1" checked><label class="form-check-label" for="m1">Muskulatur</label></div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="matrix" id="m2"><label class="form-check-label" for="m2">Leber</label></div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="matrix" id="m3" disabled><label class="form-check-label" for="m3">Weichkörper (deaktiviert)</label></div>
+        </fieldset>
+      </div>
+      <div class="col-md-6">
+        <fieldset>
+          <legend class="fs-5">Ausrichtung (inline)</legend>
+          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="ori" id="o1" checked><label class="form-check-label" for="o1">Nord</label></div>
+          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="ori" id="o2"><label class="form-check-label" for="o2">Süd</label></div>
+          <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="ori" id="o3"><label class="form-check-label" for="o3">Ost</label></div>
+        </fieldset>
+      </div>
+    </div>
+
+    <h3 class="mb-3">Radio-Button-Gruppe (Toggle-Buttons)</h3>
+    <fieldset class="mb-4">
+      <legend class="fs-5">Zeitraum</legend>
+      <div class="btn-group" role="group" aria-label="Zeitraum">
+        <input type="radio" class="btn-check" name="zeit" id="z1" checked>
+        <label class="btn btn-outline-primary" for="z1">2022</label>
+        <input type="radio" class="btn-check" name="zeit" id="z2">
+        <label class="btn btn-outline-primary" for="z2">2023</label>
+        <input type="radio" class="btn-check" name="zeit" id="z3">
+        <label class="btn btn-outline-primary" for="z3">2024</label>
+      </div>
+    </fieldset>
+
+    <h3 class="mb-3">Floating Labels</h3>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="fl1" placeholder="Name">
+          <label for="fl1">Name der Probenart</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating">
+          <select class="form-select" id="fl2">
+            <option selected>Fließgewässer</option>
+            <option>Wald</option>
+          </select>
+          <label for="fl2">Ökosystem</label>
+        </div>
       </div>
     </div>
   </section>
@@ -404,6 +628,6 @@
   </div>
 </footer>
 
-<script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
