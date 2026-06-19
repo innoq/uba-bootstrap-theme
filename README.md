@@ -30,19 +30,48 @@ please head over to
 ## Development
 
 ### Setup
-*
-* Install node v20 or higher (LTS recommended)
 
+* Install Node 24 or higher (see `engines` in `package.json`)
 * Clone project `git clone git@github.com:innoq/uba-bootstrap-theme.git`
 * Go into the project folder `cd uba-bootstrap-theme`
-* Init the Bootstrap submodule `git submodule update --init` (only needed the
-  very first time)
-* Install Bootstap's documentation pages `npm run install-docs`
-* Compile styles and serve documentation `npm start`
+* Install dependencies `npm install` (Bootstrap is a regular npm dependency — no
+  submodule needed)
 
-Now you should see the Bootstrap documentation pages with UBA styling applied.
-`npm start` incorporates a watcher, so you can write code and see your
-changes immediately in the browser.
+### Working on the theme
+
+* Build the stylesheets and assets once: `npm run dist`
+* Watch & preview the showcase pages while editing: `npm start`
+  (recompiles on change and serves `static/showcase.html` and
+  `static/components.html`)
+* Lint the Sass: `npm test`
+
+### Full Bootstrap documentation with UBA styling
+
+For a living styleguide showing every Bootstrap component in UBA styling, build
+the upstream Bootstrap docs and skin them with the theme:
+
+    npm run docs
+
+This clones Bootstrap pinned to the exact version of the `bootstrap` dependency
+into `.docs-build/` (gitignored), builds its docs, and writes the UBA-styled site
+to `./documentation/`. The clone, its dev dependencies and the generated docs are
+never part of the published npm package — theme consumers only ever get `src` and
+`dist`. Serve the result with any static server, e.g.:
+
+    python3 -m http.server -d documentation 8080
+
+The generated site has two parts:
+
+- **`/docs/5.3/`** — the full upstream Bootstrap documentation, restyled with the
+  theme (every standard component as it looks in UBA styling).
+- **`/uba/showcase.html`** and **`/uba/components.html`** — the project's own
+  showcase of UBA-specific constructs that are *not* part of Bootstrap: the
+  custom `site-header` / navbar variants (with and without service menu, light and
+  dark), footer, sitemap and card variants. These are copied from `static/` during
+  the build, so editing the showcase there keeps the docs in sync.
+
+The first run is slow (it installs Bootstrap's own docs toolchain inside
+`.docs-build/`); subsequent runs reuse the clone.
 
 ## Releasing
 

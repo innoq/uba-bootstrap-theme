@@ -8,5 +8,6 @@ yarn.lock
 build/
 scripts/
 documentation/
+.docs-build/
 node_modules/
 static/
