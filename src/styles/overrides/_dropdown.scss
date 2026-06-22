@@ -20,10 +20,10 @@ $navbar-dropdown-gap: calc(1rem + 5px);
   // is hovered, firing mouseleave and closing the menu. As a child of li.dropdown,
   // this transparent overlay keeps the parent :hover/mouseenter active on the way in.
   &::before {
-    content: "";
     position: absolute;
     inset: auto 0 100% 0; // top: auto; right: 0; bottom: 100%; left: 0
     height: $navbar-dropdown-gap;
+    content: "";
   }
 
   // Collapsed navbar: the dropdown renders inline inside the menu, so the desktop

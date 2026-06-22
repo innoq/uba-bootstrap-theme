@@ -1,7 +1,0 @@
-// Nav tabs — inactive tabs show their border at all times.
-// Bootstrap defaults to transparent, which is only tolerable on white backgrounds.
-.nav-tabs .nav-link:not(.active, :disabled) {
-  border: 1px solid $uba-gray;
-  border-bottom-color: $nav-tabs-border-color;
-  background-color: $uba-gray-light;
-}

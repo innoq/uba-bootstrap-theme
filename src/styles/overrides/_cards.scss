@@ -1,19 +1,19 @@
 .card { min-width: 250px; }
 
 .card-header {
-  padding: 1rem 1.25rem .5rem 1.25rem;
-  color: $uba-white;
   font-family: $font-family-serif;
-  font-size: 1.25rem;
+  font-size: $h3-font-size;
 
-  // Dark text on the green featured header: white (inherited above) only reaches
-  // ~2.6:1 on $uba-green, dark gray ~4.3:1.
-  &.featured {
-    background-color: $uba-green;
-    color: $uba-gray-dark;
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    margin-bottom: 0;
   }
 
-  &.list-header { background-color: $uba-web-blue; }
+  &.featured { background-color: $uba-green; }
+  &.list-header {
+    background-color: $uba-web-blue;
+    color: $uba-white;
+  }
 }
 
 .card-body {

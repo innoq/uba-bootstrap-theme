@@ -10,7 +10,7 @@
     "assets": "node build/copy-assets.mjs",
     "dist": "npm-run-all css assets",
     "docs": "node build/docs.mjs",
-    "watch": "sass --watch --style expanded --pkg-importer=node src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
+    "watch": "sass --watch --poll --style expanded --pkg-importer=node src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
     "serve": "live-server --open=/static/showcase.html",
     "start": "npm-run-all --parallel watch serve",
     "test": "stylelint \"src/**/*.scss\"",
