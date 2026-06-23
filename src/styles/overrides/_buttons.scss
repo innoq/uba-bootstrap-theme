@@ -1,27 +1,17 @@
-//
-// Buttons
-//
-
-
 .btn-link {
   color: $uba-blue;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
+
+  &:hover, &.hover,
+  &:focus, &.focus,
+  &:active, &.active {
     color: $uba-gray-dark;
   }
 }
 
 .btn-secondary {
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
+  &:hover, &.hover,
+  &:focus, &.focus,
+  &:active, &.active {
     border-color: $uba-blue;
     background-color: $uba-blue;
   }

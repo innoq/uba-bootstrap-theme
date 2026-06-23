@@ -1,67 +1,16 @@
-@media (min-width: 992px) {
-  .navbar-expand-lg:not(.sitemap, .footer) {
-    height: 80px;
-  }
-
-  // Hover background bleeds down to the 8px bottom border.
-  // margin-bottom pulls the link flush with the border; padding-bottom fills the visual gap.
-  .navbar-expand-lg.navbar-dark .navbar-nav .nav-link,
-  .navbar-expand-lg.navbar-light .navbar-nav .nav-link {
-    margin-bottom: -1rem;
-    padding-bottom: 1.75rem;
-  }
-}
-
-// Site header: logo spanning full header height, utility nav + main nav stacked on the right.
-.site-header {
-  display: flex;
-  align-items: stretch;
-  border-bottom: 8px solid $uba-web-blue;
-}
-
-.site-header-brand {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  padding: 0 $navbar-padding-x;
-
-  img {
-    width: auto;
-    height: 60px;
-  }
-}
-
-.site-header-right {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  min-width: 0;
-}
-
-// The brand lives outside the navbar (in .site-header-brand), so when the navbar
-// collapses only the toggler is left and Bootstrap's space-between aligns it left.
-// Push it to the far right.
-.site-header .navbar-toggler {
-  margin-left: auto;
-}
-
 .navbar {
+  padding-inline: 0;
   border-bottom: 8px solid $uba-web-blue;
 
-  // Inside .site-header the outer wrapper carries the border — no double line.
-  .site-header & {
-    border-bottom: none;
-  }
-
-  // Size & weight come from $nav-link-font-size / $nav-link-font-weight, so light
-  // and dark stay identical — only the colour treatment differs here.
   &.navbar-light .navbar-nav .nav-link {
     color: $uba-gray-dark;
+
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
       color: $uba-web-blue;
     }
+
     &.disabled {
       color: $navbar-light-disabled-color;
     }
@@ -69,102 +18,79 @@
 
   &.navbar-dark .navbar-nav .nav-link {
     color: $uba-white;
+
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
       background-color: $uba-web-blue;
       color: $uba-white;
     }
+
     &.disabled {
       color: $navbar-dark-disabled-color;
     }
   }
 
-  .btn {
-    border-color: $uba-web-blue;
-    background-color: $uba-web-blue;
-    color: $uba-white;
-    &:hover, &.hover,
-    &:focus, &.focus,
-    &:active, &.active {
-      background-color: $uba-blue-dark;
+  .navbar-brand {
+    padding-block: 0;
+    margin-right: 1.25rem;
+
+    img {
+      display: block;
+      width: auto;
+      height: 60px;
     }
+  }
+
+  [role="search"] .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-// Slim utility/service bar above the main navigation.
-.navbar-upper {
-  border-bottom: none;
-  padding: 0 .4rem;
-  height: unset;
-
-  .navbar-nav {
-    flex-wrap: wrap;
+@include media-breakpoint-up(lg) {
+  .navbar {
+    padding-top: 1.25rem;
+    padding-bottom: 0;
   }
 
-  // Reset the tall main-nav link treatment for this compact bar.
-  &.navbar-dark .navbar-nav .nav-link,
-  &.navbar-light .navbar-nav .nav-link {
-    margin: 0;
-    padding: .5rem 1rem;
-    line-height: 1;
-    font-size: .875rem;
+  .navbar > .container-fluid {
+    align-items: flex-start;
   }
 
-  &.navbar-dark .navbar-nav .nav-link {
-    color: $uba-gray-medium;
-    &:hover, &.hover,
-    &:focus, &.focus,
-    &:active, &.active {
-      background-color: transparent;
-      color: $uba-white;
-    }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1.25rem;
+  }
+
+  .navbar [role="search"] {
+    margin-left: 1rem;
+  }
+
+  .navbar [role="search"] .form-control {
+    min-width: 9rem;
   }
 }
 
-// Stacked mobile layout (below lg): service bar on top spanning the full width,
-// then the brand + burger on one row, then the opened menu spanning the full
-// width below. The brand, service bar, toggler and menu live in three nested
-// wrappers; flattening those wrappers with `display: contents` turns them into
-// direct flex items of .site-header so they can be ordered into that stack.
+@include media-breakpoint-between(lg, xxl) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-inline: .625rem;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .navbar [role="search"] {
+    display: none !important; // beat the form's .d-flex (display: flex !important)
+  }
+}
+
 @include media-breakpoint-down(lg) {
-  .site-header {
-    flex-wrap: wrap;
-    align-items: center; // logo and burger share one row — align them together
-  }
-
-  // Vertical breathing room so the logo doesn't sit on the blue bottom border
-  // (mirrors the spacing the 80px-tall header gives it on desktop).
-  .site-header-brand {
-    padding-block: .625rem;
-  }
-
-  // Flattening the navbar (below) drops its padding, so the burger would touch
-  // the right edge — give it an inset mirroring the logo's on the left.
-  .site-header .navbar-toggler {
-    margin-right: $navbar-padding-x;
-  }
-
-  .site-header-right,
-  .site-header .navbar:not(.navbar-upper) {
-    display: contents;
-  }
-
-  .navbar-upper {
-    order: -1;   // service bar to the very top
-    width: 100%; // full-width strip above the brand + burger row
-  }
-
-  // .navbar-collapse carries through every collapse sub-state (collapse,
-  // collapsing, collapse.show), so the menu's box model — and the nav-link
-  // padding — stay identical during the animation. Keying the padding on .show
-  // made the links jump mid-animation.
   .navbar-collapse {
-    flex-basis: 100%; // the menu drops to its own full-width row
+    margin-top: .75rem;
+  }
 
-    .nav-link {
-      margin: 0 0 .25rem 0;
-      padding: .75rem;
-    }
+  .navbar-collapse .nav-link {
+    margin: 0 0 .25rem;
+    padding: .75rem;
   }
 }

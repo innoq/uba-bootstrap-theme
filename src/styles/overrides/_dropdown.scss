@@ -1,32 +1,20 @@
-// Dropdowns
-//
-// Dropdown menu container and contents.
-//
-
 .nav .dropdown-menu { margin-top: .625rem; }
 
-// Distance from the nav-link's bottom (which sits on the border line) down to
-// the dropdown, so the menu opens just below the border. Single source of truth:
-// both the menu offset and the hover bridge below derive from it. .5rem matches
-// the 8px site-header border the menu has to clear.
+// Single source of truth for the menu offset and the hover bridge below.
 $navbar-dropdown-gap: .5rem;
 
 .navbar .dropdown-menu {
   margin-top: $navbar-dropdown-gap;
 
-  // Bridge the gap for hover-driven menus (upb_web binds .hover() on li.dropdown).
-  // Without it the pointer crosses a dead band where neither the link nor the menu
-  // is hovered, firing mouseleave and closing the menu. As a child of li.dropdown,
-  // this transparent overlay keeps the parent :hover/mouseenter active on the way in.
+  // Transparent bridge across the gap so hover-driven menus don't close while
+  // the pointer crosses from the link to the menu.
   &::before {
     position: absolute;
-    inset: auto 0 100% 0; // top: auto; right: 0; bottom: 100%; left: 0
+    inset: auto 0 100% 0;
     height: $navbar-dropdown-gap;
     content: "";
   }
 
-  // Collapsed navbar: the dropdown renders inline inside the menu, so the desktop
-  // border offset just leaves a dark gap above it, and the hover bridge is pointless.
   @include media-breakpoint-down(lg) {
     margin-top: 0;
 

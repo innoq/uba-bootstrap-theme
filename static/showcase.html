@@ -9,6 +9,13 @@
     body { padding-bottom: 4rem; }
     section { padding: 2rem 0; border-bottom: 1px solid #ededed; }
     .swatch { width: 100%; height: 48px; border-radius: 2px; }
+
+    /* Consumer-side composition (not shipped by the theme): tuck the navbar
+       closer under the functions strip when both are stacked. */
+    .site-functions + .navbar { padding-top: .25rem; }
+    @media (min-width: 992px) {
+      .site-functions + .navbar { padding-top: .625rem; }
+    }
   </style>
 </head>
 <body>
@@ -25,39 +32,45 @@
 
 <!-- Site-Header im Container -->
 <div class="container">
-<header class="site-header bg-dark">
-  <div class="site-header-brand">
-    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
-  </div>
-  <div class="site-header-right">
-    <nav class="navbar navbar-expand navbar-upper navbar-dark" aria-label="Servicemenü">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Leichte Sprache</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Gebärdensprache</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">English</a></li>
+<header>
+  <nav class="site-functions bg-dark" aria-label="Servicemenü">
+    <div class="container-fluid">
+      <ul class="site-functions-nav">
+        <li><a href="#">Leichte Sprache</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Show page in english</a></li>
       </ul>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Hauptnavigation">
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Hauptnavigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain1" aria-controls="navbarMain1" aria-expanded="false" aria-label="Navigation umschalten">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMain1">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Recherche</a>
-            <a class="dropdown-item" href="#">Karten</a>
-            <a class="dropdown-item" href="#">Downloads</a>
-          </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
-        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
-      </ul>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Recherche</a>
+              <a class="dropdown-item" href="#">Karten</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input type="hidden" name="page" value="1">
+          <label for="search_input1" class="visually-hidden">Suche</label>
+          <input type="text" id="search_input1" placeholder="Suchbegriff eingeben …" name="search" class="form-control me-sm-2" aria-describedby="submit_search1">
+          <button type="submit" class="btn btn-primary" id="submit_search1" title="Suche starten"><span class="icon-search text-white" aria-hidden="true"></span><span class="visually-hidden">Suchen</span></button>
+        </form>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 </div>
 
@@ -67,32 +80,36 @@
 
 <!-- Site-Header ohne den oberen Servicemenü-Streifen -->
 <div class="container">
-<header class="site-header bg-dark">
-  <div class="site-header-brand">
-    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
-  </div>
-  <div class="site-header-right">
-    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Hauptnavigation (ohne Servicemenü)">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Hauptnavigation (ohne Servicemenü)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain2" aria-controls="navbarMain2" aria-expanded="false" aria-label="Navigation umschalten">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMain2">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Recherche</a>
-            <a class="dropdown-item" href="#">Karten</a>
-            <a class="dropdown-item" href="#">Downloads</a>
-          </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
-        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
-      </ul>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Recherche</a>
+              <a class="dropdown-item" href="#">Karten</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input type="hidden" name="page" value="1">
+          <label for="search_input2" class="visually-hidden">Suche</label>
+          <input type="text" id="search_input2" placeholder="Suchbegriff eingeben …" name="search" class="form-control me-sm-2" aria-describedby="submit_search2">
+          <button type="submit" class="btn btn-primary" id="submit_search2" title="Suche starten"><span class="icon-search text-white" aria-hidden="true"></span><span class="visually-hidden">Suchen</span></button>
+        </form>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 </div>
 
@@ -102,39 +119,45 @@
 
 <!-- Site-Header im Container – identisch zum dunklen Header, nur helles Theme -->
 <div class="container">
-<header class="site-header bg-light">
-  <div class="site-header-brand">
-    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
-  </div>
-  <div class="site-header-right">
-    <nav class="navbar navbar-expand navbar-upper navbar-light" aria-label="Servicemenü (hell)">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Leichte Sprache</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Gebärdensprache</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">English</a></li>
+<header>
+  <nav class="site-functions bg-light" aria-label="Servicemenü (hell)">
+    <div class="container-fluid">
+      <ul class="site-functions-nav">
+        <li><a href="#">Leichte Sprache</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Show page in english</a></li>
       </ul>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Hauptnavigation (hell)">
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Hauptnavigation (hell)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain3" aria-controls="navbarMain3" aria-expanded="false" aria-label="Navigation umschalten">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMain3">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Recherche</a>
-            <a class="dropdown-item" href="#">Karten</a>
-            <a class="dropdown-item" href="#">Downloads</a>
-          </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
-        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
-      </ul>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Recherche</a>
+              <a class="dropdown-item" href="#">Karten</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input type="hidden" name="page" value="1">
+          <label for="search_input3" class="visually-hidden">Suche</label>
+          <input type="text" id="search_input3" placeholder="Suchbegriff eingeben …" name="search" class="form-control me-sm-2" aria-describedby="submit_search3">
+          <button type="submit" class="btn btn-primary" id="submit_search3" title="Suche starten"><span class="icon-search text-white" aria-hidden="true"></span><span class="visually-hidden">Suchen</span></button>
+        </form>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 </div>
 
@@ -144,32 +167,36 @@
 
 <!-- Site-Header (hell) ohne den oberen Servicemenü-Streifen -->
 <div class="container">
-<header class="site-header bg-light">
-  <div class="site-header-brand">
-    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
-  </div>
-  <div class="site-header-right">
-    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Hauptnavigation hell (ohne Servicemenü)">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Hauptnavigation hell (ohne Servicemenü)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA" height="60"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain4" aria-controls="navbarMain4" aria-expanded="false" aria-label="Navigation umschalten">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarMain4">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Recherche</a>
-            <a class="dropdown-item" href="#">Karten</a>
-            <a class="dropdown-item" href="#">Downloads</a>
-          </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
-        <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
-      </ul>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Themen</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Daten</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Recherche</a>
+              <a class="dropdown-item" href="#">Karten</a>
+              <a class="dropdown-item" href="#">Downloads</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Publikationen</a></li>
+          <li class="nav-item"><a class="nav-link disabled" href="#">Deaktiviert</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input type="hidden" name="page" value="1">
+          <label for="search_input4" class="visually-hidden">Suche</label>
+          <input type="text" id="search_input4" placeholder="Suchbegriff eingeben …" name="search" class="form-control me-sm-2" aria-describedby="submit_search4">
+          <button type="submit" class="btn btn-primary" id="submit_search4" title="Suche starten"><span class="icon-search text-white" aria-hidden="true"></span><span class="visually-hidden">Suchen</span></button>
+        </form>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 </div>
 
