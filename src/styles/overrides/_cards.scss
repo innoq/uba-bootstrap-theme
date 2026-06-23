@@ -4,11 +4,6 @@
   font-family: $font-family-serif;
   font-size: $h3-font-size;
 
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    margin-bottom: 0;
-  }
-
   &.featured { background-color: $uba-green; }
   &.list-header {
     background-color: $uba-web-blue;
