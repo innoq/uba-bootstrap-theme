@@ -10,11 +10,13 @@ $font-family-serif: "Meta Serif", Georgia, "Times New Roman", Times, serif !defa
 // Bold is now a weight variant of Meta — use font-weight: bold alongside $font-family-sans-serif
 $font-family-bold: $font-family-sans-serif !default;
 
-// Pfad zu den Schriftdateien. Default passt zum Standalone-dist (dist/css → ../fonts)
-// und zu faucet-Apps (public/assets/stylesheets → ../fonts). Vom Consumer
-// überschreibbar, z. B. für propshaft (logischer Name) oder abweichende Ablage:
-//   @import vorher:  $uba-fonts-path: "uba-bootstrap-theme";
+// Asset paths — overridable by consumers (set before @import) for compatibility
+// with different build pipelines. Default targets the standalone dist
+// (dist/css → ../fonts, ../images); a propshaft/Rails app instead sets a logical
+// name (e.g. "fonts" / "images") so the fingerprinted assets resolve, and other
+// pipelines can point elsewhere.
 $uba-fonts-path: "../fonts" !default;
+$uba-images-path: "../images" !default;
 
 //
 // General styles
@@ -184,12 +186,6 @@ $card-cap-color:                    $uba-gray-dark !default;
 // List Group
 //
 
-$list-group-color:                  $uba-gray !default;
-$list-group-bg:                     $uba-gray-light !default;
-$list-group-border-color:           rgba($uba-gray, .5) !default;
-
-$list-group-item-padding-y:         1rem !default;
-
 $list-group-hover-bg:               $uba-web-blue !default;
 $list-group-active-color:           $uba-white !default;
 $list-group-active-bg:              $uba-web-blue !default;
@@ -209,10 +205,7 @@ $list-group-action-active-bg:       $uba-web-blue !default;
 //
 
 $table-color:                 $uba-gray !default;
-$table-accent-bg:             transparent;
 $table-hover-color:           $uba-web-blue !default;
 $table-hover-bg:              $uba-gray-light !default;
 $table-active-bg:             $uba-gray-light !default;
 $table-border-color:          rgba($uba-gray, .25) !default;
-$table-head-bg:               $uba-gray-light !default;
-$table-head-color:            $uba-gray-dark !default;
