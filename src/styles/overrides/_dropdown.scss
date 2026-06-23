@@ -3,14 +3,13 @@
 // Dropdown menu container and contents.
 //
 
-.nav .dropdown-menu { margin-top: 10px; }
+.nav .dropdown-menu { margin-top: .625rem; }
 
-// Distance from the nav-link's margin-box bottom to the dropdown. Single source
-// of truth: both the menu offset and the hover bridge below derive from it.
-// 1rem mirrors the nav-link's margin-bottom: -1rem; the extra 5px moves the menu
-// flush with the outer edge of the 8px site-header border. Popper anchors to the
-// link's margin-box bottom (= border-box bottom + margin-bottom).
-$navbar-dropdown-gap: calc(1rem + 5px);
+// Distance from the nav-link's bottom (which sits on the border line) down to
+// the dropdown, so the menu opens just below the border. Single source of truth:
+// both the menu offset and the hover bridge below derive from it. .5rem matches
+// the 8px site-header border the menu has to clear.
+$navbar-dropdown-gap: .5rem;
 
 .navbar .dropdown-menu {
   margin-top: $navbar-dropdown-gap;
