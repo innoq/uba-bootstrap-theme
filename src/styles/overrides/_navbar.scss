@@ -26,6 +26,16 @@
       color: $uba-white;
     }
 
+    // Keyboard focus must be distinguishable from the active item, which already
+    // carries the blue background (WCAG 2.4.7 / 2.4.11). Inset outline so the ring
+    // can't overlap adjacent items; replaces Bootstrap's faint blue focus ring that
+    // is invisible on the blue background.
+    &:focus-visible {
+      outline: 2px solid $uba-white;
+      outline-offset: -2px;
+      box-shadow: none;
+    }
+
     &.disabled {
       color: $navbar-dark-disabled-color;
     }
