@@ -1,6 +1,6 @@
 .navbar {
   padding-inline: 0;
-  border-bottom: 8px solid $uba-web-blue;
+  border-bottom: $uba-navbar-border-width solid $uba-navbar-border-color;
 
   &.navbar-light .navbar-nav .nav-link {
     color: $uba-gray-dark;
@@ -67,6 +67,10 @@
 
   .navbar > .container-fluid {
     align-items: flex-start;
+  }
+
+  .navbar-dark.navbar-expand-lg .navbar-nav {
+    column-gap: 3px;
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {

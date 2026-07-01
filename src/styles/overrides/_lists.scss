@@ -5,21 +5,63 @@
   }
 }
 
-.card .list-group-flush {
+// `.list-group.list-group-flush` matches Bootstrap's `.card > .list-group:last-child`
+// specificity so the blue bottom edge below wins over its `border-bottom-width: 0`.
+.card .list-group.list-group-flush {
+  // Blue bottom edge, mirroring the navbar's border-bottom.
+  border-bottom: $uba-navbar-border-width solid $uba-navbar-border-color;
+
+  // Hairline separators come from Bootstrap's flush border ($list-group-border-color).
   .list-group-item-action {
-    background-color: $uba-gray-light;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: $uba-navlist-row-height;
+    padding: $uba-navlist-item-padding-y $uba-navlist-item-padding-x $uba-navlist-item-padding-y $uba-navlist-item-indent;
+    background-color: $uba-navlist-bg;
+    color: $uba-navlist-color;
+    font-size: $uba-navlist-font-size;
+    font-weight: bold;
+    text-decoration: none;
+
+    // Left indicator bar: empty by default, filled on hover/active instead of
+    // colouring the whole row.
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: $uba-navlist-indicator-width;
+      background-color: transparent;
+    }
 
     &:hover,
     &:focus {
-      background-color: $uba-web-blue;
-      color: $uba-white;
-      border-color: $uba-web-blue;
+      background-color: $uba-navlist-bg;
+      color: $uba-navlist-active-color;
+      text-decoration: underline;
+
+      &::before { background-color: $uba-navlist-indicator-color; }
+    }
+
+    // Keyboard focus ring: coloured ring separated from the row by a gap.
+    // 3.37:1 against the grey row still meets WCAG 1.4.11 (>=3:1) and 2.4.13.
+    &:focus-visible {
+      z-index: 1;
+      outline: none;
+      box-shadow: 0 0 0 $uba-focus-ring-gap $uba-white,
+                  0 0 0 ($uba-focus-ring-gap + $uba-focus-ring-width) $uba-focus-ring-color;
     }
 
     &.active {
-      background-color: tint-color($uba-web-blue, 70%);
-      border-color: tint-color($uba-web-blue, 50%);
-      color: $uba-gray-dark;
+      background-color: $uba-navlist-bg;
+      color: $uba-navlist-active-color;
+      // Keep the hairline separator instead of Bootstrap's active border colour.
+      border-color: $uba-navlist-border-color;
+      text-decoration: none;
+
+      &::before { background-color: $uba-navlist-indicator-color; }
     }
   }
 }

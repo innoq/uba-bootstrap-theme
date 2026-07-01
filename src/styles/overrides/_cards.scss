@@ -9,8 +9,14 @@
     color: $uba-white;
   }
   &.list-header {
+    display: flex;
+    align-items: center;
+    min-height: $uba-navlist-row-height;
+    padding: $uba-navlist-item-padding-y $uba-navlist-item-padding-x $uba-navlist-item-padding-y $uba-navlist-item-indent;
     background-color: $uba-web-blue;
     color: $uba-white;
+    // Same grey hairline as the item separators (not the darker card border).
+    border-bottom: $border-width solid $uba-navlist-border-color;
   }
 }
 

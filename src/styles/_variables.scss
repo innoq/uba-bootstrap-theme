@@ -22,9 +22,20 @@ $uba-images-path: "../images" !default;
 // General styles
 //
 
-$border-radius: 4px !default;
-$border-radius-lg: 4px !default;
-$border-radius-sm: 4px !default;
+// umweltbundesamt.de dropped rounded corners everywhere except buttons, so the
+// global radius is 0 and only the button radii are restored below.
+$border-radius: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-sm: 0 !default;
+
+$btn-border-radius: 4px !default;
+$btn-border-radius-lg: 4px !default;
+$btn-border-radius-sm: 4px !default;
+
+// Keyboard focus ring: a coloured ring separated from the element by a gap.
+$uba-focus-ring-gap:   1px !default;
+$uba-focus-ring-width: 4px !default;
+$uba-focus-ring-color: $uba-web-blue !default;
 
 // Body text uses the UBA dark gray (#404040), matching umweltbundesamt.de —
 // not Bootstrap's default near-black ($gray-900).
@@ -120,6 +131,10 @@ $navbar-padding-x:                  1.25rem !default;
 $navbar-nav-link-padding-x:         .75rem !default;
 $navbar-brand-font-size:            1rem !default;
 
+// Blue accent edge shared by the navbar and the secondary-nav bottom.
+$uba-navbar-border-width:           8px !default;
+$uba-navbar-border-color:           $uba-web-blue !default;
+
 $navbar-dark-color:                 $uba-white !default;
 $navbar-dark-hover-color:           $uba-white !default;
 $navbar-dark-active-color:          $uba-white !default;
@@ -186,10 +201,24 @@ $card-cap-color:                    $uba-gray-dark !default;
 // List Group
 //
 
+$list-group-border-color:           $uba-gray-medium !default;
 $list-group-hover-bg:               $uba-web-blue !default;
 $list-group-active-color:           $uba-white !default;
 $list-group-active-bg:              $uba-web-blue !default;
 $list-group-active-border-color:    $uba-blue-dark !default;
+
+// UBA secondary navigation (card list-group)
+$uba-navlist-bg:                    $uba-gray-light !default;
+$uba-navlist-color:                 $uba-gray-dark !default;
+$uba-navlist-active-color:          $uba-web-blue !default;
+$uba-navlist-font-size:             1.25rem !default;
+$uba-navlist-row-height:            3.25rem !default;   // shared by header + items
+$uba-navlist-item-padding-y:        0.5rem !default;
+$uba-navlist-item-padding-x:        1.25rem !default;
+$uba-navlist-item-indent:           1.875rem !default;
+$uba-navlist-indicator-width:       0.625rem !default;
+$uba-navlist-indicator-color:       $uba-web-blue !default;
+$uba-navlist-border-color:          $uba-gray-medium !default;
 
 $list-group-disabled-color:         rgba($uba-gray, .5) !default;
 $list-group-disabled-bg:            transparent !default;
