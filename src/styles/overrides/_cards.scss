@@ -4,7 +4,10 @@
   font-family: $font-family-serif;
   font-size: $h3-font-size;
 
-  &.featured { background-color: $uba-green; }
+  &.featured {
+    background-color: $uba-green-dark;
+    color: $uba-white;
+  }
   &.list-header {
     background-color: $uba-web-blue;
     color: $uba-white;
@@ -38,7 +41,7 @@
   max-width: none;
 
   .card-img-top {
-    background-color: $uba-green;
+    background-color: $uba-green-dark;
     height: 150px;
   }
 }
