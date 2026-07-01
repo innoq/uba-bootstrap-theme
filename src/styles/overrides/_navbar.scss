@@ -59,7 +59,7 @@
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
   .navbar {
     padding-top: 1.25rem;
     padding-bottom: 0;
@@ -69,11 +69,11 @@
     align-items: flex-start;
   }
 
-  .navbar-dark.navbar-expand-lg .navbar-nav {
+  .navbar-dark.navbar-expand-xl .navbar-nav {
     column-gap: 3px;
   }
 
-  .navbar-expand-lg .navbar-nav .nav-link {
+  .navbar-expand-xl .navbar-nav .nav-link {
     padding: 1.25rem;
   }
 
@@ -86,19 +86,13 @@
   }
 }
 
-@include media-breakpoint-between(lg, xxl) {
-  .navbar-expand-lg .navbar-nav .nav-link {
+@include media-breakpoint-only(xl) {
+  .navbar-expand-xl .navbar-nav .nav-link {
     padding-inline: .625rem;
   }
 }
 
-@include media-breakpoint-only(lg) {
-  .navbar [role="search"] {
-    display: none !important; // beat the form's .d-flex (display: flex !important)
-  }
-}
-
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
   .navbar-collapse {
     margin-top: .75rem;
   }
