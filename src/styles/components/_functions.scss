@@ -18,7 +18,7 @@
     display: block;
     padding: .5rem .75rem;
     line-height: 1.3;
-    font-size: 1rem;
+    font-size: 0.8125rem;
     font-weight: 400;
     text-decoration: none;
   }
@@ -33,6 +33,7 @@
 
   &:hover, &:focus {
     color: $uba-white;
+    text-decoration: underline;
   }
 }
 
@@ -41,5 +42,6 @@
 
   &:hover, &:focus {
     color: $uba-web-blue;
+    text-decoration: underline;
   }
 }
