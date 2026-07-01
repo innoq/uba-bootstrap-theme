@@ -1,5 +1,13 @@
 .card { min-width: 250px; }
 
+.card:has(.stretched-link) {
+  transition: box-shadow .15s ease-in-out;
+
+  &:hover {
+    box-shadow: $uba-hover-shadow;
+  }
+}
+
 .card-header {
   font-family: $font-family-serif;
   font-size: $h3-font-size;
