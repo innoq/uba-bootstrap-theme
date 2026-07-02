@@ -14,33 +14,33 @@
   // Hairline separators come from Bootstrap's flush border ($list-group-border-color).
   .list-group-item-action {
     display: flex;
-    align-items: center;
     position: relative;
-    min-height: $uba-navlist-row-height;
-    padding: $uba-navlist-item-padding-y $uba-navlist-item-padding-x $uba-navlist-item-padding-y $uba-navlist-item-indent;
+    align-items: center;
     background-color: $uba-navlist-bg;
+    padding: $uba-navlist-item-padding-y $uba-navlist-item-padding-x $uba-navlist-item-padding-y $uba-navlist-item-indent;
+    min-height: $uba-navlist-row-height;
+    text-decoration: none;
     color: $uba-navlist-color;
     font-size: $uba-navlist-font-size;
     font-weight: bold;
-    text-decoration: none;
 
     // Left indicator bar: empty by default, filled on hover/active instead of
     // colouring the whole row.
     &::before {
-      content: "";
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      width: $uba-navlist-indicator-width;
       background-color: transparent;
+      width: $uba-navlist-indicator-width;
+      content: "";
     }
 
     &:hover,
     &:focus {
       background-color: $uba-navlist-bg;
-      color: $uba-navlist-active-color;
       text-decoration: underline;
+      color: $uba-navlist-active-color;
 
       &::before { background-color: $uba-navlist-indicator-color; }
     }
@@ -55,11 +55,11 @@
     }
 
     &.active {
-      background-color: $uba-navlist-bg;
-      color: $uba-navlist-active-color;
       // Keep the hairline separator instead of Bootstrap's active border colour.
       border-color: $uba-navlist-border-color;
+      background-color: $uba-navlist-bg;
       text-decoration: none;
+      color: $uba-navlist-active-color;
 
       &::before { background-color: $uba-navlist-indicator-color; }
     }

@@ -1,6 +1,6 @@
 .navbar {
-  padding-inline: 0;
   border-bottom: $uba-navbar-border-width solid $uba-navbar-border-color;
+  padding-inline: 0;
 
   &.navbar-light .navbar-nav .nav-link {
     color: $uba-gray-dark;
@@ -42,8 +42,8 @@
   }
 
   .navbar-brand {
-    padding-block: 0;
     margin-right: 1.25rem;
+    padding-block: 0;
 
     img {
       display: block;
