@@ -15,7 +15,11 @@ $uba-yellow-dark: #D78400;
 $uba-red: #CE1F5E;
 $uba-red-dark: #83053C;
 
-$primary:       $uba-web-blue;
+// Buttons/utilities use the darker UBA blue so Bootstrap's color-contrast()
+// auto-selects white text (7.05:1, WCAG AAA). $uba-web-blue is too light for
+// white (~3.5:1) and would fall back to black. Navbar accents keep $uba-web-blue
+// directly, so they stay the lighter brand blue.
+$primary:       $uba-blue-dark;
 $secondary:     $uba-gray;
 $success:       $uba-green-dark;
 $info:          $uba-blue;
