@@ -14,6 +14,7 @@
     "serve": "live-server --open=/static/showcase.html",
     "start": "npm-run-all --parallel watch serve",
     "test": "stylelint \"src/**/*.scss\"",
+    "prepare": "npm run dist",
     "prepublishOnly": "npm-run-all test dist"
   },
   "repository": {
