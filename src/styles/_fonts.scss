@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Meta';
-	src: url('#{$uba-fonts-path}/MetaWebPro-Normal.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaWebPro-Normal.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaWebPro-Normal.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'Meta';
-	src: url('#{$uba-fonts-path}/MetaWebPro-Bold.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaWebPro-Bold.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaWebPro-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -16,15 +16,7 @@
 
 @font-face {
 	font-family: 'Meta Serif';
-	src: url('#{$uba-fonts-path}/MetaSerifWeb-Medium.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaSerifWeb-Medium.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Meta Serif';
-	src: url('#{$uba-fonts-path}/MetaSerifWeb-Bold.woff2') format('woff2'), url('#{$uba-fonts-path}/MetaSerifWeb-Bold.woff') format('woff');
+	src: url('#{$uba-fonts-path}/MetaSerifWeb-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
