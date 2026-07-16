@@ -81,7 +81,9 @@ $breadcrumb-divider:                string.quote(">") !default;
 // Links
 //
 
-$link-color:                        $uba-web-blue !default;
+// $uba-web-blue on white is only ~3.8:1 (fails WCAG AA for body text). Use the
+// darker UBA blue (~7:1, AAA), matching the $primary contrast fix.
+$link-color:                        $uba-blue-dark !default;
 $link-hover-color:                  $uba-gray !default;
 $link-hover-decoration:             none !default;
 $link-decoration:                   none !default;
