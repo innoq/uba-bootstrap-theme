@@ -39,16 +39,7 @@
 }
 
 .card-link {
-  color: $uba-web-blue;
   font-weight: bold;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    color: $uba-blue-dark;
-  }
 }
 
 .card-profile {
