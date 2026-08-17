@@ -77,6 +77,18 @@
     padding: 1.25rem;
   }
 
+  // Let every link fill the row. Otherwise a link that stays on one line keeps
+  // its own height while a wrapping neighbour makes the row taller, and its
+  // highlight ends short of the navbar edge.
+  .navbar-expand-xl .navbar-nav > .nav-item {
+    display: flex;
+  }
+
+  .navbar-expand-xl .navbar-nav > .nav-item > .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
   .navbar [role="search"] {
     margin-left: 1rem;
   }
