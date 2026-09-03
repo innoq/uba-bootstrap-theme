@@ -3,18 +3,19 @@
     "requireBranch": "master",
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
+    "commit": true,
     "commitMessage": "Version ${version}",
+    "tag": true,
     "tagName": "v${version}",
     "tagAnnotation": "Version ${version}",
-    "push": true
+    "push": true,
+    "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}"
   },
   "npm": {
     "publish": false
   },
   "github": {
-    "release": true,
-    "releaseName": "v${version}",
-    "autoGenerate": true
+    "release": false
   },
   "hooks": {
     "before:init": ["npm test", "npm run dist"]

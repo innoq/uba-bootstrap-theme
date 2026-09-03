@@ -75,32 +75,28 @@ The first run is slow (it installs Bootstrap's own docs toolchain inside
 
 ## Releasing
 
-A release is published to npm by a maintainer bumping the version and
-publishing the corresponding GitHub Release. The actual `npm publish` runs in
-GitHub Actions (`.github/workflows/release.yml`) and authenticates to npm via
-[trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC) — no npm
-token is stored anywhere. The build (`npm run dist`) and linting (`npm test`)
-run automatically via the `prepublishOnly` hook.
-
 Cutting a release is one command, driven by
-[release-it](https://github.com/release-it/release-it) (`.release-it.json`):
+[release-it](https://github.com/release-it/release-it) (`.release-it.json`),
+following the same pattern as `@innoq/innoq-styleguide`:
 
 ```sh
-export GITHUB_TOKEN=$(gh auth token)   # release-it talks to the GitHub API
-npm run release -- minor               # or major, patch, or an exact version
+npm run release -- minor   # or major, patch, or an exact version
 ```
 
 It lints and builds first, then bumps the version, commits it as `Version
-X.Y.Z`, tags `vX.Y.Z`, pushes, and creates the GitHub Release. It deliberately
-does **not** run `npm publish` itself — publishing the GitHub Release triggers
-the workflow, which builds and publishes to npm.
+X.Y.Z`, tags `vX.Y.Z` and pushes both. That is all it does locally — no npm
+token, no GitHub token.
 
-Add `--dry-run` to walk through every step without changing anything. To
-release the version already in `package.json` without bumping, use
-`npm run release -- --no-increment`.
+Pushing the tag triggers `.github/workflows/release.yml`, which runs
+`npm publish` (linting and building via the `prepublishOnly` hook),
+authenticates to npm via
+[trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC), and
+only then creates the GitHub Release. A failed publish therefore leaves no
+release behind.
 
-A push to `master` on its own publishes nothing; only a published GitHub
-Release does.
+A push to `master` publishes nothing — only a `v*` tag does. Add `--dry-run`
+to walk through every step without changing anything; use `--no-increment` to
+release the version already in `package.json`.
 
 ### Manual fallback
 
@@ -108,11 +104,12 @@ If the pipeline is unavailable, an npm owner can publish from their machine.
 The `prepublishOnly` hook still builds and lints first:
 
 ```sh
-npm version <patch|minor|major>
-npm publish
-git push --follow-tags
+npm run release -- <patch|minor|major>   # tags and pushes as usual
+npm publish                              # then publish by hand
 ```
 
-Becoming a publisher requires npm owner rights (`npm owner add <user>
-uba-bootstrap-theme`, run by an existing owner) and 2FA enabled on your npm
-account.
+Check whether you may publish with `npm access list packages` — it has to list
+`uba-bootstrap-theme: read-write`. Note that `npm owner ls` and the
+`maintainers` field are not the authority here: at innoq the right usually
+comes from being a member of the `innoq` npm organisation, which those two do
+not show.
