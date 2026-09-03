@@ -36,6 +36,14 @@ $btn-border-radius-sm: 4px !default;
 $uba-focus-ring-gap:   1px !default;
 $uba-focus-ring-width: 4px !default;
 $uba-focus-ring-color: $uba-web-blue !default;
+$uba-focus-ring-box-shadow:
+  0 0 0 $uba-focus-ring-gap $uba-white,
+  0 0 0 ($uba-focus-ring-gap + $uba-focus-ring-width) $uba-focus-ring-color !default;
+
+$focus-ring-box-shadow: $uba-focus-ring-box-shadow !default;
+
+$input-border-color:       $uba-gray !default;
+$input-focus-border-color: $uba-gray !default;
 
 // Body text uses the UBA dark gray (#404040), matching umweltbundesamt.de —
 // not Bootstrap's default near-black ($gray-900).
@@ -62,7 +70,6 @@ $btn-padding-x: .625rem !default;
 $btn-line-height: 1.3 !default;
 
 $btn-box-shadow: none !default;
-$btn-focus-box-shadow: none !default;
 $btn-active-box-shadow: none !default;
 
 $uba-hover-shadow: 0 10px 15px -3px rgb(0, 0, 0, .1), 0 4px 6px -4px rgb(0, 0, 0, .1) !default;

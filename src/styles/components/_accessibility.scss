@@ -1,3 +1,8 @@
+:focus-visible {
+  outline: none;
+  box-shadow: $uba-focus-ring-box-shadow;
+}
+
 // Skip link — off-screen until focused (WCAG 2.4.1).
 .skip-link {
   position: absolute;

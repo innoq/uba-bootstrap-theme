@@ -1,3 +1,7 @@
+.btn:focus-visible {
+  --#{$prefix}btn-focus-box-shadow: #{$uba-focus-ring-box-shadow};
+}
+
 .btn:hover {
   box-shadow: $uba-hover-shadow;
 }

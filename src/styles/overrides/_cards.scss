@@ -3,7 +3,8 @@
 .card:has(.stretched-link) {
   transition: box-shadow .15s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     box-shadow: $uba-hover-shadow;
   }
 }
