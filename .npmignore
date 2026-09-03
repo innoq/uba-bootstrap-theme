@@ -1,13 +1,13 @@
 .release-it.json
 .travis.yml
 *.zip
-faucet.config.js
-faucet.config.dev.js
 yarn.lock
 .editorconfig
 .gitmodules
-.sass-lint.yml
+.stylelintrc.json
+build/
 scripts/
 documentation/
+.docs-build/
 node_modules/
 static/

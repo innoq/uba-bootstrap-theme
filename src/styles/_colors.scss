@@ -1,25 +1,29 @@
-@use 'sass:color';
-
 $uba-green: #5EAD35;
 $uba-green-dark: #007626;
-$uba-blue: color.adjust(#0081C7, $lightness: -4.7%);  // Linkfarbe => Originalfarbe zu hell für AAA-Kontrast (ARIA). Daher 4.7% dunkler.
-$uba-blue-dark: #005E82;
+$uba-blue: #009BD5;             // Brand colour (logos, illustrations)
+$uba-blue-dark: #005F85;
+$uba-web-blue: #2C8ABC;         // Primary/link colour on umweltbundesamt.de
 $uba-white: #FFFFFF;
-$uba-gray-light: #EDEDED;
-$uba-gray: #666666;
-$uba-gray-dark: #333333; // Textfarbe
-$uba-purple: #955dA2;
-$uba-purple-dark: #592D65;
-$uba-yellow: #FBB93A;
-$uba-yellow-dark: #D3812E;
-$uba-red: #CE2f6A;
-$uba-red-dark: #7C003D;
+$uba-gray-light: #F0F1F1;
+$uba-gray-medium: #C8C8C8;
+$uba-gray: #4B4B4D;
+$uba-gray-dark: #404040;        // Text colour + header background
+$uba-purple: #9D579A;
+$uba-purple-dark: #622F63;
+$uba-yellow: #FABB00;
+$uba-yellow-dark: #D78400;
+$uba-red: #CE1F5E;
+$uba-red-dark: #83053C;
 
-$primary:       $uba-blue;
+// Buttons/utilities use the darker UBA blue so Bootstrap's color-contrast()
+// auto-selects white text (7.05:1, WCAG AAA). $uba-web-blue is too light for
+// white (~3.5:1) and would fall back to black. Navbar accents keep $uba-web-blue
+// directly, so they stay the lighter brand blue.
+$primary:       $uba-blue-dark;
 $secondary:     $uba-gray;
-$success:       $uba-green;
-$info:          $uba-green;
+$success:       $uba-green-dark;
+$info:          $uba-blue;
 $warning:       $uba-yellow;
 $danger:        $uba-red;
 $light:         $uba-gray-light;
-$dark:          $uba-gray;
+$dark:          $uba-gray-dark;

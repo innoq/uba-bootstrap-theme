@@ -1,16 +1,32 @@
 .card { min-width: 250px; }
 
+.card:has(.stretched-link) {
+  transition: box-shadow .15s ease-in-out;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: $uba-hover-shadow;
+  }
+}
+
 .card-header {
-  font-family: 'MetaSerifComp-Medium';
-  font-size: 1.25rem;
-  color: $uba-white;
-  padding: 1rem 1.25rem .5rem 1.25rem;
+  font-family: $font-family-serif;
+  font-size: $h3-font-size;
 
   &.featured {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(94, 173, 53) 40%, rgb(94, 173, 53) 100%), asset-url("bg-highlight.png");
+    background-color: $uba-green-dark;
+    color: $uba-white;
   }
-
-  &.list-header { background: $uba-blue; }
+  &.list-header {
+    display: flex;
+    align-items: center;
+    // Same grey hairline as the item separators (not the darker card border).
+    border-bottom: $border-width solid $uba-navlist-border-color;
+    background-color: $uba-web-blue;
+    padding: $uba-navlist-item-padding-y $uba-navlist-item-padding-x $uba-navlist-item-padding-y $uba-navlist-item-indent;
+    min-height: $uba-navlist-row-height;
+    color: $uba-white;
+  }
 }
 
 .card-body {
@@ -18,40 +34,20 @@
     margin-bottom: 0;
   }
   .text-box {
-    padding: 1rem;
-
     background-color: $uba-white;
+    padding: 1rem;
   }
 }
 
 .card-link {
   font-weight: bold;
-  color: $uba-blue;
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus,
-  &:active,
-  &.active {
-    color: $uba-blue-dark;
-  }
-}
-
-.border-primary {
-  border: 15px solid $uba-gray-light;
-  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light .75%) 15;
-}
-
-.border-secondary {
-  border: 15px solid $uba-gray-light;
-  border-image: repeating-linear-gradient( -45deg, $uba-white, $uba-gray-light 1.5%) 15;
 }
 
 .card-profile {
   max-width: none;
 
   .card-img-top {
+    background-color: $uba-green-dark;
     height: 150px;
-    background-color: $uba-green;
   }
 }

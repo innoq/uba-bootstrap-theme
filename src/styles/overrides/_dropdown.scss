@@ -1,7 +1,37 @@
-// Dropdowns
-//
-// Dropdown menu container and contents.
-//
+.nav .dropdown-menu { margin-top: .625rem; }
 
-.nav .dropdown-menu { margin-top: 10px; }
-.navbar .dropdown-menu { margin-top: 28px; }
+// Single source of truth for the menu offset and the hover bridge below.
+$navbar-dropdown-gap: .5rem;
+
+.navbar .dropdown-menu {
+  // Anchor the menu to the bottom of the nav item. Without this it keeps its
+  // static position right below the link, which drifts up into the navbar as
+  // soon as a neighbouring link wraps and makes the row taller.
+  top: 100%;
+  left: 0;
+  margin-top: $navbar-dropdown-gap;
+
+  // Transparent bridge across the gap so hover-driven menus don't close while
+  // the pointer crosses from the link to the menu.
+  &::before {
+    position: absolute;
+    inset: auto 0 100% 0;
+    height: $navbar-dropdown-gap;
+    content: "";
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+
+    &::before { content: none; }
+  }
+}
+
+.navbar .dropdown-item {
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+}
+
+.dropdown-item + .dropdown-item {
+  border-top: 1px solid $dropdown-divider-bg;
+}

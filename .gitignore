@@ -60,5 +60,8 @@ typings/
 
 documentation/
 
+# Bootstrap clone + its deps used only to build the docs (npm run docs)
+.docs-build/
+
 # IntelliJ
 .idea

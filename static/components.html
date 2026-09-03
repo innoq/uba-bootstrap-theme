@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UBA Bootstrap Theme – UBA-Komponenten</title>
+  <link href="/dist/css/uba-bootstrap-theme.css" rel="stylesheet">
+  <style>
+    body { padding-bottom: 4rem; }
+    section { padding: 2rem 0; border-bottom: 1px solid #ededed; }
+    .demo-note { color: #6c757d; }
+  </style>
+</head>
+<body>
+
+<!-- Skip-Link: visuell verborgen, bis er per Tastatur fokussiert wird -->
+<a class="skip-link" href="#content">Zum Inhalt springen</a>
+
+<div class="container py-4 border-bottom mb-2">
+  <h1>UBA-Sonderkomponenten</h1>
+  <p class="lead">Komponenten, die das Theme über Bootstrap hinaus mitbringt – die UBA-Markenelemente (Seiten-Chrome &amp; gebrandete Card-Varianten).</p>
+  <p class="demo-note"><small>Die reinen Bootstrap-Komponenten im UBA-Look sind in <a href="/static/showcase.html">showcase.html</a> dokumentiert.</small></p>
+</div>
+
+<main id="content" class="container">
+
+  <section>
+    <h2>Skip-Link <small class="demo-note">(<code>.skip-link</code>)</small></h2>
+    <p>Sprungmarke für Tastatur-/Screenreader-Nutzer (WCAG 2.4.1). Standardmäßig
+    außerhalb des sichtbaren Bereichs, wird beim Fokussieren eingeblendet.</p>
+    <p class="demo-note"><small>Demo: Seite neu laden und <kbd>Tab</kbd> drücken – der Link erscheint oben links.
+    Er steht als erstes Element im <code>&lt;body&gt;</code> dieser Seite.</small></p>
+  </section>
+
+  <section>
+    <h2>Card: Teaser <small class="demo-note">(<code>.card-header.featured</code> + <code>.text-box</code>)</small></h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-img-top bg-secondary" style="height: 160px"></div>
+            <h5 class="card-header featured">Probenbeschreibungen</h5>
+            <p class="card-text text-box mb-4">Vor der chemischen Analyse werden die untersuchten
+            Probenarten vermessen und beschrieben. Recherchieren Sie ausgewählte Probenbeschreibungen
+            und erhalten Sie einen Überblick über biometrische und anamnestische Kenngrößen.</p>
+            <a href="#" class="btn btn-secondary">zur Datenrecherche</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Card: Profil <small class="demo-note">(<code>.card-profile</code>)</small></h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-profile">
+          <div class="card-img-top"></div>
+          <div class="card-body">
+            <h5 class="card-header list-header">Brassen</h5>
+            <p class="card-text mt-2">Probenart aus dem Ökosystem Fließgewässer. Matrix: Muskulatur.</p>
+            <a href="#" class="card-link">zum Steckbrief</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Label für Select <small class="demo-note">(<code>.label-for-select</code>)</small></h2>
+    <p class="demo-note"><small>Kleines, eng anliegendes Label über einem Select – für kompakte Filterleisten.</small></p>
+    <div class="row">
+      <div class="col-md-4">
+        <label class="label-for-select" for="sel-eco">Ökosystem</label>
+        <select class="form-select" id="sel-eco">
+          <option>Fließgewässer</option>
+          <option>Wald</option>
+          <option>Marin</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- UBA-Sonderkomponente: Sitemap (dunkelblauer Footer-Navigationsblock) -->
+<div class="container"><h2 class="pt-4 pb-2">Sitemap <small class="demo-note">(<code>.sitemap</code>)</small></h2></div>
+<div class="sitemap">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md">
+        <ul class="list-unstyled">
+          <h2>Grundlagen</h2>
+          <li><a href="#">Einführung</a></li>
+          <li><a href="#">Arbeitsabläufe</a></li>
+          <li><a href="#">Aufgaben und Ziele</a></li>
+          <li><a href="#">Konzeption</a></li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <ul class="list-unstyled">
+          <h2>Steckbriefe</h2>
+          <li><a href="#">Ökosysteme</a></li>
+          <li><a href="#">Probenarten</a></li>
+          <li><a href="#">Probenahmegebiete</a></li>
+          <li><a href="#">Analyte</a></li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <ul class="list-unstyled">
+          <h2>Datenrecherche</h2>
+          <li><a href="#">Chemische Belastungen</a></li>
+          <li><a href="#">Probenbeschreibungen</a></li>
+        </ul>
+      </div>
+      <div class="col-md">
+        <ul class="list-unstyled">
+          <h2>Service</h2>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Hilfe</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UBA-Sonderkomponente: Footer-Leiste (weiß) -->
+<div class="container"><h2 class="pt-4 pb-2">Footer <small class="demo-note">(<code>.footer</code>)</small></h2></div>
+<footer class="footer">
+  <div class="container">
+    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA"></a>
+    <span class="ms-3">© Umweltbundesamt – Alle Rechte vorbehalten</span>
+    <nav class="d-inline">
+      <a class="nav-link d-inline" href="#">Impressum</a>
+      <a class="nav-link d-inline" href="#">Datenschutz</a>
+      <a class="nav-link d-inline" href="#">Kontakt</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

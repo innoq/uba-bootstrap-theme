@@ -1,28 +1,21 @@
-//
-// Custom Bootstrap variables
-//
-
 @import 'colors';
-@import 'fonts';
 @import 'variables';
+@import 'fonts';
+@import 'pkg:bootstrap';
 
-//
-// Bootstrap 5.3
-//
-
-@import '../../bootstrap/scss/bootstrap';
-
-//
-// Bootstrap Overrides
-//
-
-@import 'overrides/buttons';
+// Overrides of existing Bootstrap components
 @import 'overrides/breadcrumb';
+@import 'overrides/buttons';
 @import 'overrides/cards';
 @import 'overrides/dropdown';
-@import 'overrides/footer';
 @import 'overrides/input';
 @import 'overrides/lists';
 @import 'overrides/navbar';
-@import 'overrides/sitemap';
 @import 'overrides/typography';
+
+// Custom UBA components
+@import 'components/accessibility';
+@import 'components/footer';
+@import 'components/functions';
+@import 'components/icons';
+@import 'components/sitemap';

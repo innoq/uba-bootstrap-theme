@@ -1,0 +1,71 @@
+footer {
+  margin-top: 3rem;
+}
+
+.sitemap {
+  background-color: $uba-blue-dark;
+  color: $uba-white;
+
+  a {
+    color: $uba-white;
+    font-weight: normal;
+    &:hover, &:focus {
+      color: $uba-gray-medium;
+    }
+
+    // Without an explicit focus style these links fall back to the UA default
+    // focus ring, which differs per browser/OS accent colour (e.g. white+red in
+    // Firefox). Define a consistent white ring against the dark sitemap background.
+    &:focus-visible {
+      outline: 2px solid $uba-white;
+      outline-offset: 2px;
+    }
+  }
+
+  h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: $uba-white;
+    font-family: $font-family-bold;
+    font-size: 1rem;
+  }
+}
+
+.footer {
+  border-top: 1px solid rgba($uba-gray, .25);
+  background-color: $uba-white;
+  padding: 1rem;
+  font-size: 0.875rem;
+
+  img {
+    margin-top: -0.25rem;
+    height: 2.5rem;
+  }
+
+  a {
+    color: $uba-gray-dark;
+    font-weight: normal;
+    &:hover, &:focus {
+      color: $uba-web-blue;
+    }
+
+    // Replace Bootstrap's default box-shadow focus ring (bleeds 0.25rem into
+    // adjacent links) and the UA default ring with a contained outline.
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+  }
+
+  .nav-link {
+    padding: 0.25rem 0.75rem;
+    font-size: inherit;
+
+    // Inset so the wrapped (vertical) footer nav can't enclose the neighbouring
+    // link in its focus indicator.
+    &:focus-visible {
+      outline-offset: -2px;
+    }
+  }
+}

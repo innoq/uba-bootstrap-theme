@@ -1,66 +1,116 @@
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    height: 96px;
-  }
-}
-
 .navbar {
-  border-bottom: 10px solid $uba-blue;
-  &.bg-dark {
-    background-image: asset-url('bg-header-pattern.png');
-  }
-  &.bg-light {
-    background-image: asset-url('bg-box-pattern.png');
-   }
+  border-bottom: $uba-navbar-border-width solid $uba-navbar-border-color;
+  padding-inline: 0;
 
   &.navbar-light .navbar-nav .nav-link {
-    font-size: 15px;
-    font-weight: $font-weight-bold;
     color: $uba-gray-dark;
-    padding-bottom: 2.5rem;
-    margin-bottom: -1.75rem;
+
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
-      color: $uba-blue;
+      color: $uba-web-blue;
     }
+
     &.disabled {
-      color: $uba-gray;
+      color: $navbar-light-disabled-color;
     }
   }
 
   &.navbar-dark .navbar-nav .nav-link {
-    font-size: 15px;
-    font-weight: $font-weight-bold;
     color: $uba-white;
-    padding-bottom: 2.5rem;
-    margin-bottom: -1.75rem;
+
     &:hover, &.hover,
     &:focus, &.focus,
     &:active, &.active {
+      background-color: $uba-web-blue;
       color: $uba-white;
-      background-color: $uba-blue;
     }
+
+    // Keyboard focus must be distinguishable from the active item, which already
+    // carries the blue background (WCAG 2.4.7 / 2.4.11). Inset outline so the ring
+    // can't overlap adjacent items; replaces Bootstrap's faint blue focus ring that
+    // is invisible on the blue background.
+    &:focus-visible {
+      outline: 2px solid $uba-white;
+      outline-offset: -2px;
+      box-shadow: none;
+    }
+
     &.disabled {
-      color: $uba-gray;
+      color: $navbar-dark-disabled-color;
     }
   }
 
-  .btn {
-    color: $uba-white;
-    background-color: $uba-blue;
-    border-color: $uba-blue;
-    &:hover, &.hover,
-    &:focus, &.focus,
-    &:active, &.active {
-      background-color: $uba-blue-dark;
+  .navbar-brand {
+    margin-right: 1.25rem;
+    padding-block: 0;
+
+    img {
+      display: block;
+      width: auto;
+      height: 60px;
     }
+  }
+
+  [role="search"] .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.collapse.navbar-collapse.show .nav-link {
-  @include media-breakpoint-down(lg) {
+@include media-breakpoint-up(xl) {
+  .navbar {
+    padding-top: 1.25rem;
+    padding-bottom: 0;
+  }
+
+  .navbar > .container-fluid {
+    align-items: flex-start;
+  }
+
+  .navbar-dark.navbar-expand-xl .navbar-nav {
+    column-gap: 3px;
+  }
+
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding: 1.25rem;
+  }
+
+  // Let every link fill the row. Otherwise a link that stays on one line keeps
+  // its own height while a wrapping neighbour makes the row taller, and its
+  // highlight ends short of the navbar edge.
+  .navbar-expand-xl .navbar-nav > .nav-item {
+    display: flex;
+  }
+
+  .navbar-expand-xl .navbar-nav > .nav-item > .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar [role="search"] {
+    margin-left: 1rem;
+  }
+
+  .navbar [role="search"] .form-control {
+    min-width: 9rem;
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  .navbar-expand-xl .navbar-nav .nav-link {
+    padding-inline: .625rem;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .navbar-collapse {
+    margin-top: .75rem;
+  }
+
+  .navbar-collapse .nav-link {
+    margin: 0 0 .25rem;
     padding: .75rem;
-    margin: 0 0 .25rem 0;
   }
 }

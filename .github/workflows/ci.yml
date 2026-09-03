@@ -1,0 +1,27 @@
+name: CI
+
+# Runs on every branch push and on pull requests.
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # Lint the SCSS sources (same as `npm test`).
+      - name: Lint (stylelint)
+        run: npm test
+
+      # Verify the full build pipeline compiles: Sass -> PostCSS -> CleanCSS + asset copy.
+      - name: Build and test
+        run: npm run dist

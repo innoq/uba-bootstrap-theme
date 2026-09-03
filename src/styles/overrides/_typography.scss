@@ -2,12 +2,13 @@
 // Headlines
 //
 
-h1, h2, h3 {
-  font-family: 'MetaSerifComp-Medium';
-  src: asset-url('MetaSerifWeb-Medium.eot') format('embedded-opentype'), asset-url('MetaSerifWeb-Medium.woff') format('woff');
-
-  margin-bottom: .5rem;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-serif;
 }
 
-p { width: -webkit-fill-available; }
+h1 { line-height: 1.2; }
+
+h3, h4, h5, h6 { line-height: 1.3; }
+
+
 a { font-weight: $font-weight-bold; }

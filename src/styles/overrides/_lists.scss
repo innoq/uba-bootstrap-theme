@@ -1,6 +1,66 @@
 .list-group-item {
   &:disabled,
   &.disabled {
-    background-image: asset-url('bg-box-pattern.png');
+    background-color: $uba-gray-light;
+  }
+}
+
+// `.list-group.list-group-flush` matches Bootstrap's `.card > .list-group:last-child`
+// specificity so the blue bottom edge below wins over its `border-bottom-width: 0`.
+.card .list-group.list-group-flush {
+  // Blue bottom edge, mirroring the navbar's border-bottom.
+  border-bottom: $uba-navbar-border-width solid $uba-navbar-border-color;
+
+  // Hairline separators come from Bootstrap's flush border ($list-group-border-color).
+  .list-group-item-action {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: $uba-navlist-bg;
+    padding: $uba-navlist-item-padding-y $uba-navlist-item-padding-x $uba-navlist-item-padding-y $uba-navlist-item-indent;
+    min-height: $uba-navlist-row-height;
+    text-decoration: none;
+    color: $uba-navlist-color;
+    font-size: $uba-navlist-font-size;
+    font-weight: bold;
+
+    // Left indicator bar: empty by default, filled on hover/active instead of
+    // colouring the whole row.
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      width: $uba-navlist-indicator-width;
+      content: "";
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $uba-navlist-bg;
+      text-decoration: underline;
+      color: $uba-navlist-active-color;
+
+      &::before { background-color: $uba-navlist-indicator-color; }
+    }
+
+    // Keyboard focus ring: coloured ring separated from the row by a gap.
+    // 3.37:1 against the grey row still meets WCAG 1.4.11 (>=3:1) and 2.4.13.
+    &:focus-visible {
+      z-index: 1;
+      outline: none;
+      box-shadow: $uba-focus-ring-box-shadow;
+    }
+
+    &.active {
+      // Keep the hairline separator instead of Bootstrap's active border colour.
+      border-color: $uba-navlist-border-color;
+      background-color: $uba-navlist-bg;
+      text-decoration: none;
+      color: $uba-navlist-active-color;
+
+      &::before { background-color: $uba-navlist-indicator-color; }
+    }
   }
 }
