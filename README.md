@@ -82,14 +82,25 @@ GitHub Actions (`.github/workflows/release.yml`) and authenticates to npm via
 token is stored anywhere. The build (`npm run dist`) and linting (`npm test`)
 run automatically via the `prepublishOnly` hook.
 
+Cutting a release is one command, driven by
+[release-it](https://github.com/release-it/release-it) (`.release-it.json`):
+
 ```sh
-npm version <patch|minor|major>   # bumps package.json + creates a git tag
-git push --follow-tags
-gh release create vX.Y.Z --generate-notes
+export GITHUB_TOKEN=$(gh auth token)   # release-it talks to the GitHub API
+npm run release -- minor               # or major, patch, or an exact version
 ```
 
-Publishing the GitHub Release triggers the workflow, which builds and publishes
-the package to npm.
+It lints and builds first, then bumps the version, commits it as `Version
+X.Y.Z`, tags `vX.Y.Z`, pushes, and creates the GitHub Release. It deliberately
+does **not** run `npm publish` itself — publishing the GitHub Release triggers
+the workflow, which builds and publishes to npm.
+
+Add `--dry-run` to walk through every step without changing anything. To
+release the version already in `package.json` without bumping, use
+`npm run release -- --no-increment`.
+
+A push to `master` on its own publishes nothing; only a published GitHub
+Release does.
 
 ### Manual fallback
 

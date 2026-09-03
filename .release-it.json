@@ -1,0 +1,22 @@
+{
+  "git": {
+    "requireBranch": "master",
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true,
+    "commitMessage": "Version ${version}",
+    "tagName": "v${version}",
+    "tagAnnotation": "Version ${version}",
+    "push": true
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "v${version}",
+    "autoGenerate": true
+  },
+  "hooks": {
+    "before:init": ["npm test", "npm run dist"]
+  }
+}
