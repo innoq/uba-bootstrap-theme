@@ -1,6 +1,6 @@
 {
   "name": "uba-bootstrap-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UBA branded Bootstrap 5 theme",
   "scripts": {
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --pkg-importer=node src/styles/index.scss:dist/css/uba-bootstrap-theme.css",
