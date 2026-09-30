@@ -83,61 +83,63 @@
 
 </main>
 
-<!-- UBA-Sonderkomponente: Sitemap (dunkelblauer Footer-Navigationsblock) -->
-<div class="container"><h2 class="pt-4 pb-2">Sitemap <small class="demo-note">(<code>.sitemap</code>)</small></h2></div>
-<div class="sitemap">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md">
-        <ul class="list-unstyled">
-          <h2>Grundlagen</h2>
-          <li><a href="#">Einführung</a></li>
-          <li><a href="#">Arbeitsabläufe</a></li>
-          <li><a href="#">Aufgaben und Ziele</a></li>
-          <li><a href="#">Konzeption</a></li>
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class="list-unstyled">
-          <h2>Steckbriefe</h2>
-          <li><a href="#">Ökosysteme</a></li>
-          <li><a href="#">Probenarten</a></li>
-          <li><a href="#">Probenahmegebiete</a></li>
-          <li><a href="#">Analyte</a></li>
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class="list-unstyled">
-          <h2>Datenrecherche</h2>
-          <li><a href="#">Chemische Belastungen</a></li>
-          <li><a href="#">Probenbeschreibungen</a></li>
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class="list-unstyled">
-          <h2>Service</h2>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Hilfe</a></li>
-          <li><a href="#">Impressum</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- UBA-Sonderkomponente: Sitemap (dunkelblaue Navigationsleiste über dem Footer) -->
+<div class="container"><h2 class="pt-4 pb-2">Sitemap <small class="demo-note">(<code>.sitemap</code>, <code>.sitemap-nav</code>)</small></h2></div>
+<nav class="sitemap" aria-label="Inhaltsübersicht">
+  <ul class="sitemap-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Grundlagen</a></li>
+    <li><a href="#">Steckbriefe</a></li>
+    <li><a href="#">Datenrecherche</a></li>
+    <li><a href="#">Ergebnisse</a></li>
+    <li><a href="#">Service</a></li>
+    <li><a href="#">Glossar</a></li>
+  </ul>
+</nav>
 
 <!-- UBA-Sonderkomponente: Footer-Leiste (weiß) -->
-<div class="container"><h2 class="pt-4 pb-2">Footer <small class="demo-note">(<code>.footer</code>)</small></h2></div>
+<div class="container"><h2 class="pt-4 pb-2">Footer <small class="demo-note">(<code>.footer</code>, <code>.footer-nav</code>, <code>.footer-meta</code>)</small></h2></div>
 <footer class="footer">
-  <div class="container">
-    <a href="#"><img src="/dist/images/upb-bild-wortmarke-rgb.svg" alt="UBA"></a>
-    <span class="ms-3">© Umweltbundesamt – Alle Rechte vorbehalten</span>
-    <nav class="d-inline">
-      <a class="nav-link d-inline" href="#">Impressum</a>
-      <a class="nav-link d-inline" href="#">Datenschutz</a>
-      <a class="nav-link d-inline" href="#">Kontakt</a>
-    </nav>
+  <nav aria-label="Fußzeilen-Navigation">
+    <ul class="footer-nav">
+      <li><a href="#">Impressum</a></li>
+      <li><a href="#">Kontakt</a></li>
+      <li><a href="#">Datenschutz</a></li>
+      <li><a href="#">Erklärung zur Barrierefreiheit</a></li>
+      <li><a href="#">Leichte Sprache</a></li>
+      <li><a href="#">Nach oben</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Social Media">
+    <ul class="social-media">
+      <li><a href="#" title="Folgen Sie uns auf Facebook"><img src="/dist/images/icon-facebook.svg" width="32" height="32" alt="Facebook"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf YouTube"><img src="/dist/images/icon-youtube.svg" width="32" height="32" alt="YouTube"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf Instagram"><img src="/dist/images/icon-instagram.svg" width="32" height="32" alt="Instagram"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf LinkedIn"><img src="/dist/images/icon-linkedin.svg" width="32" height="32" alt="LinkedIn"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf Mastodon"><img src="/dist/images/icon-mastodon.svg" width="32" height="32" alt="Mastodon"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf Bluesky"><img src="/dist/images/icon-bluesky.svg" width="32" height="32" alt="Bluesky"></a></li>
+    </ul>
+  </nav>
+  <div class="footer-meta">
+    <a class="footer-logo" href="#"><img src="/dist/images/uba-brand.svg" alt="Umweltbundesamt"></a>
+    <a class="footer-copyright" href="#">© Umweltbundesamt – Alle Rechte vorbehalten</a>
   </div>
 </footer>
+
+<!-- UBA-Sonderkomponente: Social-Media-Links (auch außerhalb des Footers nutzbar) -->
+<div class="container"><h2 class="pt-4 pb-2">Social Media <small class="demo-note">(<code>.social-media</code>)</small></h2></div>
+<div class="container">
+  <nav aria-label="Social Media">
+    <ul class="social-media">
+      <li><a href="#" title="Folgen Sie uns auf Facebook"><img src="/dist/images/icon-facebook.svg" width="32" height="32" alt="Facebook"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf YouTube"><img src="/dist/images/icon-youtube.svg" width="32" height="32" alt="YouTube"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf Instagram"><img src="/dist/images/icon-instagram.svg" width="32" height="32" alt="Instagram"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf LinkedIn"><img src="/dist/images/icon-linkedin.svg" width="32" height="32" alt="LinkedIn"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf Mastodon"><img src="/dist/images/icon-mastodon.svg" width="32" height="32" alt="Mastodon"></a></li>
+      <li><a href="#" title="Folgen Sie uns auf Bluesky"><img src="/dist/images/icon-bluesky.svg" width="32" height="32" alt="Bluesky"></a></li>
+    </ul>
+  </nav>
+</div>
 
 <script src="/dist/js/bootstrap.bundle.min.js"></script>
 </body>

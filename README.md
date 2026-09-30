@@ -67,7 +67,7 @@ The generated site has two parts:
 - **`/uba/showcase.html`** and **`/uba/components.html`** — the project's own
   showcase of UBA-specific constructs that are *not* part of Bootstrap: the
   custom `site-header` / navbar variants (with and without service menu, light and
-  dark), footer, sitemap and card variants. These are copied from `static/` during
+  dark), footer, sitemap, social media links and card variants. These are copied from `static/` during
   the build, so editing the showcase there keeps the docs in sync.
 
 The first run is slow (it installs Bootstrap's own docs toolchain inside

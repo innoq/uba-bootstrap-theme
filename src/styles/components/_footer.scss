@@ -2,51 +2,17 @@ footer {
   margin-top: 3rem;
 }
 
-.sitemap {
-  background-color: $uba-blue-dark;
-  color: $uba-white;
-
-  a {
-    color: $uba-white;
-    font-weight: normal;
-    &:hover, &:focus {
-      color: $uba-gray-medium;
-    }
-
-    // Without an explicit focus style these links fall back to the UA default
-    // focus ring, which differs per browser/OS accent colour (e.g. white+red in
-    // Firefox). Define a consistent white ring against the dark sitemap background.
-    &:focus-visible {
-      outline: 2px solid $uba-white;
-      outline-offset: 2px;
-    }
-  }
-
-  h2, h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: $uba-white;
-    font-family: $font-family-bold;
-    font-size: 1rem;
-  }
-}
-
 .footer {
-  border-top: 1px solid rgba($uba-gray, .25);
   background-color: $uba-white;
-  padding: 1rem;
-  font-size: 0.875rem;
-
-  img {
-    margin-top: -0.25rem;
-    height: 2.5rem;
-  }
+  padding: $footer-padding-y $footer-padding-x;
+  line-height: $footer-line-height;
 
   a {
     color: $uba-gray-dark;
     font-weight: normal;
     &:hover, &:focus {
-      color: $uba-web-blue;
+      text-decoration: underline;
+      color: $uba-blue-dark;
     }
 
     // Replace Bootstrap's default box-shadow focus ring (bleeds 0.25rem into
@@ -58,14 +24,53 @@ footer {
     }
   }
 
-  .nav-link {
-    padding: 0.25rem 0.75rem;
-    font-size: inherit;
-
-    // Inset so the wrapped (vertical) footer nav can't enclose the neighbouring
-    // link in its focus indicator.
-    &:focus-visible {
-      outline-offset: -2px;
-    }
+  @include media-breakpoint-up(lg) {
+    padding-right: $footer-padding-x-lg;
+    padding-left: $footer-padding-x-lg;
   }
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: ($spacer * .5) $spacer;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $footer-padding-y;
+  padding: 0 $footer-item-padding;
+}
+
+.footer-logo img {
+  height: $spacer * 2.5;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    padding: ($spacer * .25) $footer-item-padding;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .nav-link {
+    padding: 0;
+    font-size: inherit;
+  }
+}
+
+.footer-copyright {
+  text-decoration: none;
+}
+
+.footer .social-media {
+  margin-top: $footer-padding-y;
 }

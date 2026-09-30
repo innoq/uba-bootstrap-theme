@@ -1,0 +1,23 @@
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: ($spacer * 1.25) ($spacer * 3.5);
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: block;
+    line-height: 1;
+  }
+
+  img {
+    width: $spacer * 2;
+    height: $spacer * 2;
+  }
+
+  @include media-breakpoint-up(md) {
+    column-gap: $spacer * 2.5;
+  }
+}

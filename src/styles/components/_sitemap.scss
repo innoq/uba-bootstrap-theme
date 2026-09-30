@@ -1,6 +1,56 @@
-// Visual styles live in _footer.scss; only structural layout here.
 .sitemap {
-  padding: 2rem 1rem 1rem;
+  background-color: $uba-blue-dark;
+  padding: $footer-padding-y $footer-padding-x;
   width: 100%;
+  line-height: $footer-line-height;
+  color: $uba-white;
+
+  a {
+    color: $uba-white;
+    font-weight: normal;
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $uba-white;
+    }
+
+    // Without an explicit focus style these links fall back to the UA default
+    // focus ring, which differs per browser/OS accent colour (e.g. white+red in
+    // Firefox). Define a consistent white ring against the dark sitemap background.
+    &:focus-visible {
+      outline: 2px solid $uba-white;
+      outline-offset: 2px;
+    }
+  }
+
+  h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: $uba-white;
+    font-family: $font-family-bold;
+    font-size: 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-right: $footer-padding-x-lg;
+    padding-left: $footer-padding-x-lg;
+  }
 }
 
+.sitemap-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: $footer-item-padding 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    padding: $footer-item-padding;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: $font-family-bold;
+    font-weight: $font-weight-bold;
+  }
+}
