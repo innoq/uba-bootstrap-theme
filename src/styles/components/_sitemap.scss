@@ -1,7 +1,6 @@
 .sitemap {
   background-color: $uba-blue-dark;
   padding: $footer-padding-y $footer-padding-x;
-  width: 100%;
   line-height: $footer-line-height;
   color: $uba-white;
 
@@ -20,14 +19,6 @@
       outline: 2px solid $uba-white;
       outline-offset: 2px;
     }
-  }
-
-  h2, h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: $uba-white;
-    font-family: $font-family-bold;
-    font-size: 1rem;
   }
 
   @include media-breakpoint-up(lg) {

@@ -26,6 +26,31 @@ please head over to
 
 <https://getbootstrap.com>
 
+### Footer components
+
+The page footer is built from these classes (see `static/components.html` for
+complete markup):
+
+- **`.sitemap`** with a **`.sitemap-nav`** list — the dark blue bar with the
+  top-level navigation.
+- **`.footer`** — the white bar below it, containing a **`.footer-nav`** list,
+  optionally **`.footer-nav-icon`** for small inline icons in front of a link, and
+  a **`.footer-meta`** row with **`.footer-logo`** and **`.footer-copyright`**.
+- **`.social-media`** — a list of social media links. It also works outside the
+  footer. The icons `images/icon-<channel>.svg` (Facebook, YouTube, Instagram,
+  LinkedIn, Mastodon, Bluesky) contain a `<symbol id="icon">`; embed them with
+  `<svg><use href="…/icon-<channel>.svg#icon"></use></svg>` so they take the link
+  colour (hover, forced-colors mode). Give each link a text alternative, e.g. a
+  `.visually-hidden` span.
+
+Spacing, line height and icon sizes come from the `$footer-*` and
+`$social-media-icon-size` variables in `_variables.scss`.
+
+**Breaking change in 1.1.0:** the rules `.footer img` and `.footer .nav-link`,
+the `.footer` border and small font size and the `.sitemap` padding were removed
+or changed. Footer markup written for 1.0.x has to be migrated to the classes
+above.
+
 
 ## Development
 

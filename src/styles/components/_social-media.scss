@@ -10,11 +10,23 @@
   a {
     display: block;
     line-height: 1;
+    color: $uba-gray-dark;
+
+    &:hover, &:focus {
+      color: $uba-blue-dark;
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
   }
 
-  img {
-    width: $spacer * 2;
-    height: $spacer * 2;
+  img,
+  svg {
+    display: block;
+    width: $social-media-icon-size;
+    height: $social-media-icon-size;
   }
 
   @include media-breakpoint-up(md) {

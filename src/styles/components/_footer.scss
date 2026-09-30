@@ -67,6 +67,13 @@ footer {
   }
 }
 
+.footer-nav-icon {
+  margin-right: $spacer * .25;
+  width: $footer-icon-size;
+  height: $footer-icon-size;
+  vertical-align: text-bottom;
+}
+
 .footer-copyright {
   text-decoration: none;
 }
