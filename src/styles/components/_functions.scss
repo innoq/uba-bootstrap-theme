@@ -41,6 +41,11 @@
     outline-offset: -2px;
     box-shadow: none;
   }
+
+  &.active {
+    background-color: $uba-blue-dark;
+    color: $uba-white;
+  }
 }
 
 .site-functions.bg-light .site-functions-nav a {
@@ -55,5 +60,10 @@
     outline: 2px solid currentColor;
     outline-offset: -2px;
     box-shadow: none;
+  }
+
+  &.active {
+    background-color: $uba-blue-dark;
+    color: $uba-white;
   }
 }
