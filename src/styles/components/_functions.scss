@@ -35,6 +35,12 @@
     text-decoration: underline;
     color: $uba-white;
   }
+
+  &:focus-visible {
+    outline: 2px solid $uba-white;
+    outline-offset: -2px;
+    box-shadow: none;
+  }
 }
 
 .site-functions.bg-light .site-functions-nav a {
@@ -43,5 +49,11 @@
   &:hover, &:focus {
     text-decoration: underline;
     color: $uba-web-blue;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+    box-shadow: none;
   }
 }
