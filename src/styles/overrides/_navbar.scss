@@ -59,6 +59,15 @@
   }
 }
 
+.navbar-nav {
+  align-self: stretch;
+
+  .nav-link {
+    width: 100%;
+    text-align: start;
+  }
+}
+
 @include media-breakpoint-up(xl) {
   .navbar {
     padding-top: 1.25rem;
